@@ -16,9 +16,9 @@ Features include:
 
 - Upload unique thumbnail image and set custom dimensions
 - Include multiple galleries on a page/post
-- Set the ‘sort order’ of images in the galleries
+- Set the 'sort order' of images in the galleries
 - WordPress ShortCodes for easy content integration
-- And much more…
+- And much more...
 
 For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>
 
@@ -44,3 +44,4 @@ Be sure to also check my other plugins <a href='http://wordpress.org/extend/plug
 **Oct. 24, 2001 - v1.0**
 
 * Initial release.
+
