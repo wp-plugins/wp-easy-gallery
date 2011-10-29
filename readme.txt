@@ -22,7 +22,7 @@ Features include:
 
 For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>
 
-Be sure to also check my other plugins <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a> and <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>.
+Be sure to also check my other plugins: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a> and <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>.
 
 == Screenshots ==
 1. PrettyPhoto style pop-up for image gallery
@@ -44,4 +44,6 @@ Be sure to also check my other plugins <a href='http://wordpress.org/extend/plug
 **Oct. 24, 2001 - v1.0**
 
 * Initial release.
-
+   
+   
+   
