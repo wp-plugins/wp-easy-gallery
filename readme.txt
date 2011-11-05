@@ -1,7 +1,7 @@
 === WP Easy Gallery ===
 Contributors: hahncgdev
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U
-Tags: gallery, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery
+Tags: gallery, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery
 Requires at least: 2.6
 Tested up to: 3.2.1
 Stable tag: 1.0
@@ -10,7 +10,7 @@ WP Easy Gallery is a WordPress gallery plugin that allows you to create and mana
 
 == Description ==
 
-WP Easy Gallery is a WordPress gallery plugin that allows you to create and manage multiple image galleries through an easy to use admin interface.
+WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to create and manage multiple image galleries through a simple admin interface.
 
 Features include:
 
@@ -20,7 +20,7 @@ Features include:
 - WordPress ShortCodes for easy content integration
 - And much more...
 
-For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>
+For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>WP Easy Gallery</a>
 
 Be sure to also check my other plugins: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a> and <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>.
 
@@ -38,6 +38,10 @@ Be sure to also check my other plugins: <a href='http://labs.hahncreativegroup.c
 1. Create new galleries in the `Add Gallery` Panel
 1. Add images to galleries in the `Add Images` Panel
 1. Add generated shortcode to content to display gallery
+
+== Other Notes ==
+
+- Requires PHP 5
 
 == Changelog ==
 
