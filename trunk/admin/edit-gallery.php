@@ -85,7 +85,7 @@ if(isset($_POST['hcg_edit_gallery']))
             </tr>
             <tr>
             	<td><strong>Enter Thumbnail Imagepath:</strong></td>
-                <td><!--<input type="text" size="50" name="gallerythumbpath" value="" />--><input id="upload_image" type="text" size="36" name="upload_image" value="<?php echo $gallery->thumbnail; ?>" />
+                <td><input id="upload_image" type="text" size="36" name="upload_image" value="<?php echo $gallery->thumbnail; ?>" />
 					<input id="upload_image_button" type="button" value="Upload Image" /></td>
                 <td>This is the file path for the gallery thumbnail image.</td>
             </tr>
@@ -110,8 +110,8 @@ if(isset($_POST['hcg_edit_gallery']))
     <?php } ?>
     <br />
 <p><strong>Try Custom Post Donations Pro</strong><br /><em>This WordPress plugin will allow you to create unique customized PayPal donation widgets to insert into your WordPress posts or pages and accept donations.</em></p>
-<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" border="0" alt="Custom Post Donations Pro" /></a></p>
+<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" border="0" alt="Custom Post Donations Pro" /></a><br /><em>Only $14.95</em></p>
 <br />
-<p><em>Please consider donating to the continued development of this plugin. Thanks.</em></p>
+<p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
 </div>
