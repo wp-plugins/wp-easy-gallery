@@ -182,7 +182,7 @@
 		$desc = implode(", ", $descriptions);
 		$ttl = implode(", ", $titles);		
 		
-		$galleryLink = "<a href=\"#\"onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\"><img src=\"".$gallery->thumbnail."\" width=\"".$gallery->thumbwidth."\" height=\"".$gallery->thumbheight."\" border=\"0\" /></a>";
+		$galleryLink = "<a href=\"#\" onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\"><img src=\"".$gallery->thumbnail."\" width=\"".$gallery->thumbwidth."\" height=\"".$gallery->thumbheight."\" border=\"0\" /></a>";
 		return $galleryLink;
 	}
 	
