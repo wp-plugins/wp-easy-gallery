@@ -5,7 +5,7 @@
 	Description: Wordpress Plugin for creating dynamic photo galleries
 	
 	Author: HahnCreativeGroup
-	Version: 1.1
+	Version: 1.2
 	Author URI: http://labs.hahncreativegroup.com/
 	*/
 	
@@ -85,10 +85,7 @@
 			define( 'HCGGALLERY_PLUGIN_NAME', trim( dirname( HCGGALLERY_PLUGIN_BASENAME ), '/' ) );
 		
 		if ( ! defined( 'HCGGALLERY_PLUGIN_DIR' ) )
-			define( 'HCGGALLERY_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . HCGGALLERY_PLUGIN_NAME );
-		/*
-		*$scripts = "<script type=\"text/javascript\" src=\"" . get_settings('home') . "/wp-content/plugins/".HCGGALLERY_PLUGIN_NAME."/js/jquery-1.4.4.min.js\"></script>\n";		
-		*/
+			define( 'HCGGALLERY_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . HCGGALLERY_PLUGIN_NAME );		
 		
 		$scripts = "<link rel=\"stylesheet\" href=\"".get_settings('home') . "/wp-content/plugins/".HCGGALLERY_PLUGIN_NAME."/css/prettyPhoto.css\" type=\"text/css\" media=\"screen\" title=\"prettyPhoto main stylesheet\" charset=\"utf-8\" />\n";
 		$scripts = $scripts."<script type=\"text/javascript\" src=\"" . get_settings('home') . "/wp-content/plugins/".HCGGALLERY_PLUGIN_NAME."/js/jquery.prettyPhoto.js\"></script>\n";
@@ -162,7 +159,7 @@
 	{			
 		global $wpdb;
 		
-		$gallery = $wpdb->get_row( "SELECT Id, thumbnail, thumbwidth, thumbheight FROM wp_easy_gallery WHERE slug = '$galleryName'" );
+		$gallery = $wpdb->get_row( "SELECT Id, name, thumbnail, thumbwidth, thumbheight FROM wp_easy_gallery WHERE slug = '$galleryName'" );
 		$imageResults = $wpdb->get_results( "SELECT * FROM wp_easy_gallery_images WHERE gid = $gallery->Id ORDER BY sortOrder ASC" );
 		
 		$images = array();
@@ -182,7 +179,7 @@
 		$desc = implode(", ", $descriptions);
 		$ttl = implode(", ", $titles);		
 		
-		$galleryLink = "<a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\"><img src=\"".$gallery->thumbnail."\" width=\"".$gallery->thumbwidth."\" height=\"".$gallery->thumbheight."\" border=\"0\" /></a>";
+		$galleryLink = "<a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img src=\"".$gallery->thumbnail."\" width=\"".$gallery->thumbwidth."\" height=\"".$gallery->thumbheight."\" border=\"0\" /></a>";
 		return $galleryLink;
 	}
 	

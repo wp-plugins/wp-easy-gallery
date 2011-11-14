@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: gallery, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery
 Requires at least: 2.6
 Tested up to: 3.2.1
-Stable tag: 1.1
+Stable tag: 1.2
 
 WP Easy Gallery is a WordPress gallery plugin that allows you to create and manage multiple image galleries through an easy to use admin interface.
 
@@ -52,3 +52,8 @@ Be sure to also check my other plugins: <a href='http://labs.hahncreativegroup.c
 **Nov. 7, 2011 - v1.1**
 
 * Fixed bug that caused screen jumping when gallery launched.
+
+**Nov. 14, 2011 - v1.2**
+
+* Corrected style issue to show pointer when gallery thumbnail is in hover state.
+* Added functionality to show gallery name on hover.
