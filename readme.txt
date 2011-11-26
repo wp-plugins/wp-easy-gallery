@@ -59,3 +59,5 @@ Be sure to also check my other plugins: <a href='http://labs.hahncreativegroup.c
 * Added functionality to show gallery name on hover.
 
 
+
+
