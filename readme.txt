@@ -57,3 +57,5 @@ Be sure to also check my other plugins: <a href='http://labs.hahncreativegroup.c
 
 * Corrected style issue to show pointer when gallery thumbnail is in hover state.
 * Added functionality to show gallery name on hover.
+
+
