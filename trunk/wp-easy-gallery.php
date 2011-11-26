@@ -187,3 +187,4 @@
   add_shortcode('EasyGallery', 'EasyGallery_Handler');
   
 ?>
+
