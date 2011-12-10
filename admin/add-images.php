@@ -1,13 +1,15 @@
 <?php
 global $wpdb;
+global $easy_gallery_table;
+global $easy_gallery_image_table;
 
-$galleryResults = $wpdb->get_results( "SELECT * FROM wp_easy_gallery" );
+$galleryResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_table" );
 
 //Select gallery
 if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) {
 	$gid = (isset($_POST['select_gallery'])) ? $_POST['select_gallery'] : $_POST['galleryId'];
-	$imageResults = $wpdb->get_results( "SELECT * FROM wp_easy_gallery_images WHERE gid = $gid ORDER BY sortOrder ASC" );
-	$gallery = $wpdb->get_row( "SELECT * FROM wp_easy_gallery WHERE Id = $gid" );
+	$imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gid ORDER BY sortOrder ASC" );
+	$gallery = $wpdb->get_row( "SELECT * FROM $easy_gallery_table WHERE Id = $gid" );
 }
 
 //Add image
@@ -17,19 +19,19 @@ if(isset($_POST['galleryId']) && !isset($_POST['switch'])) {
 	$imageTitle = $_POST['image_title'];
 	$imageDescription = $_POST['image_description'];
 	$sortOrder = 0 + $_POST['image_sortOrder'];
-	$imageAdded = $wpdb->insert( 'wp_easy_gallery_images', array( 'gid' => $gid, 'imagePath' => $imagePath, 'title' => $imageTitle, 'description' => $imageDescription, 'sortOrder' => $sortOrder ) );
+	$imageAdded = $wpdb->insert( $easy_gallery_image_table, array( 'gid' => $gid, 'imagePath' => $imagePath, 'title' => $imageTitle, 'description' => $imageDescription, 'sortOrder' => $sortOrder ) );
 	
 	if($imageAdded) {
 	?>
 		<div class="updated"><p><strong><?php _e('Image saved.' ); ?></strong></p></div>  
 	<?php }
 	//Reload images
-	$imageResults = $wpdb->get_results( "SELECT * FROM wp_easy_gallery_images WHERE gid = $gid ORDER BY sortOrder ASC" );
+	$imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gid ORDER BY sortOrder ASC" );
 }
 
 //Edit image
 if(isset($_POST['edit_image'])) {
-	$imageEdited = $wpdb->update( 'wp_easy_gallery_images', array( 'imagePath' => $_POST['edit_imagePath'], 'title' => $_POST['edit_imageTitle'], 'description' => $_POST['edit_imageDescription'], 'sortOrder' => $_POST['edit_imageSort'] ), array( 'Id' => $_POST['edit_image'] ) );
+	$imageEdited = $wpdb->update( $easy_gallery_image_table, array( 'imagePath' => $_POST['edit_imagePath'], 'title' => $_POST['edit_imageTitle'], 'description' => $_POST['edit_imageDescription'], 'sortOrder' => $_POST['edit_imageSort'] ), array( 'Id' => $_POST['edit_image'] ) );
 		
 		?>  
         <div class="updated"><p><strong><?php _e('Image has been edited.' ); ?></strong></p></div>  
@@ -38,7 +40,7 @@ if(isset($_POST['edit_image'])) {
 
 // Delete image
 if(isset($_POST['delete_image'])) {
-	$wpdb->query( "DELETE FROM wp_easy_gallery_images WHERE Id = '".$_POST['delete_image']."'" );
+	$wpdb->query( "DELETE FROM $easy_gallery_image_table WHERE Id = '".$_POST['delete_image']."'" );
 		
 		?>  
         <div class="updated"><p><strong><?php _e('Image has been deleted.' ); ?></strong></p></div>  
@@ -156,9 +158,10 @@ if(isset($_POST['delete_image'])) {
      </table>
      <?php } ?>
      <br />
-<p><strong>Try Custom Post Donations Pro</strong><br /><em>This WordPress plugin will allow you to create unique customized PayPal donation widgets to insert into your WordPress posts or pages and accept donations.</em></p>
-<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" border="0" alt="Custom Post Donations Pro" /></a><br /><em>Only $14.95</em></p>
-<br />
-<p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
+     <p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
+<br />
+<p><strong>Try Custom Post Donations Pro</strong><br /><em>This WordPress plugin will allow you to create unique customized PayPal donation widgets to insert into your WordPress posts or pages and accept donations. Features include: Multiple PayPal accounts, Custom donation form display titles, and more.</em></p>
+<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" border="0" alt="Custom Post Donations Pro" /></a><br /><em>Only <s>$14.95</s> $2.99 (until 2012)</em></p>
+<?php //<p><a href="http://mhlnk.com/8572E215" target="_blank"><img src="http://media.markethealth.com/bannerServer.php?type=image&ad_id=1865&aid=934801" border="0"></a></p> ?><br /><br />
 </div>

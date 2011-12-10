@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: gallery, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery
 Requires at least: 2.6
 Tested up to: 3.2.1
-Stable tag: 1.2
+Stable tag: 1.3
 
 WP Easy Gallery is a WordPress gallery plugin that allows you to create and manage multiple image galleries through an easy to use admin interface.
 
@@ -39,6 +39,20 @@ Be sure to also check my other plugins: <a href='http://labs.hahncreativegroup.c
 1. Add images to galleries in the `Add Images` Panel
 1. Add generated shortcode to content to display gallery
 
+== FAQs ==
+
+**What is the best way to load images?**
+
+* Click the 'Upload Image' button
+* Select the 'From Computer' tab
+* Click the 'Select Files' button
+* Choose the desired image to upload
+* After image has completed, click the 'Insert into post' button
+
+**Why can't I add galleries to my site?**
+
+* WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
+
 == Other Notes ==
 
 - Requires PHP 5
@@ -55,11 +69,9 @@ Be sure to also check my other plugins: <a href='http://labs.hahncreativegroup.c
 
 **Nov. 14, 2011 - v1.2**
 
-* Corrected style issue to show pointer when gallery thumbnail is in hover state.
+* Cursor now shows pointer when gallery thumbnail is in hover state.
 * Added functionality to show gallery name on hover.
 
+**Dec. 9, 2011 - v1.3**
 
-
-
-
-
+* Fixed issue preventing custom database table prefixes from passing through
