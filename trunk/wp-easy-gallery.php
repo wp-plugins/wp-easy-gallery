@@ -5,9 +5,10 @@
 	Description: Wordpress Plugin for creating dynamic photo galleries
 	
 	Author: HahnCreativeGroup
-	Version: 1.2
+	Version: 1.3
 	Author URI: http://labs.hahncreativegroup.com/
-	*/	
+	*/
+	
 	
 	/* ==================================================================================
 	 * Create custom database table
@@ -67,7 +68,8 @@
 	/* ==================================================================================
 	 * Include JS File in Header
 	 * ================================================================================== 
-	 */	
+	 */
+	
 	
 	function attach_EasyGallery_jquery() {
 		wp_enqueue_script('jquery');
@@ -122,6 +124,7 @@
 
 		// Add a second submenu to the custom top-level menu:
 		add_submenu_page('hcg-admin', __('Easy Gallery >> Add Images','menu-hcg'), __('Add Images','menu-hcg'), 'manage_options', 'add-images', 'add_images');
+
 	}
 	
 	add_action( 'admin_menu', 'add_hcg_menu' );
@@ -185,6 +188,5 @@
 	  return createEasyGallery($atts[id]);
   }
   add_shortcode('EasyGallery', 'EasyGallery_Handler');
-  
+	
 ?>
-
