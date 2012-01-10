@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: gallery, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery
 Requires at least: 2.6
 Tested up to: 3.2.1
-Stable tag: 1.3
+Stable tag: 1.3.1
 
 WP Easy Gallery is a WordPress gallery plugin that allows you to create and manage multiple image galleries through an easy to use admin interface.
 
@@ -39,7 +39,7 @@ Be sure to also check out these other plugins: <a href='http://labs.hahncreative
 1. Add images to galleries in the `Add Images` Panel
 1. Add generated shortcode to content to display gallery
 
-== FAQs ==
+== FAQ ==
 
 **What is the best way to load images?**
 
@@ -75,3 +75,8 @@ Be sure to also check out these other plugins: <a href='http://labs.hahncreative
 **Dec. 9, 2011 - v1.3**
 
 * Fixed issue preventing custom database table prefixes from passing through
+
+**Jan. 9, 2012 - v1.3.1**
+
+* Fixed issue preventing custom database table prefixes from passing through on gallery specific code
+

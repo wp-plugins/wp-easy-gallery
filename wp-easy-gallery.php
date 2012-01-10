@@ -2,10 +2,9 @@
 	/*
 	Plugin Name: WP Easy Gallery
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
-	Description: Wordpress Plugin for creating dynamic photo galleries
-	
+	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 1.3
+	Version: 1.3.1
 	Author URI: http://labs.hahncreativegroup.com/
 	*/
 	
@@ -154,13 +153,15 @@
 	 * ================================================================================== 
 	 */
 	 
-	// function creates the actual JS script block that replaces the obfuscated email address
+	// function creates the gallery
 	function createEasyGallery($galleryName)	
 	{			
 		global $wpdb;
+		global $easy_gallery_table;
+		global $easy_gallery_image_table;
 		
-		$gallery = $wpdb->get_row( "SELECT Id, name, thumbnail, thumbwidth, thumbheight FROM wp_easy_gallery WHERE slug = '$galleryName'" );
-		$imageResults = $wpdb->get_results( "SELECT * FROM wp_easy_gallery_images WHERE gid = $gallery->Id ORDER BY sortOrder ASC" );
+		$gallery = $wpdb->get_row( "SELECT Id, name, thumbnail, thumbwidth, thumbheight FROM $easy_gallery_table WHERE slug = '$galleryName'" );
+		$imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gallery->Id ORDER BY sortOrder ASC" );
 		
 		$images = array();
 		$descriptions = array();
