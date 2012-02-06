@@ -1,12 +1,12 @@
 === WP Easy Gallery ===
 Contributors: hahncgdev
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U
-Tags: gallery, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery
+Tags: gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery
 Requires at least: 2.6
 Tested up to: 3.3.1
 Stable tag: 1.3.1
 
-WP Easy Gallery is a WordPress gallery plugin that allows you to create and manage multiple image galleries through an easy to use admin interface.
+WP Easy Gallery is a gallery plugin for WordPress that allows you to create and manage multiple image galleries through an easy to use admin interface.
 
 == Description ==
 
@@ -22,9 +22,12 @@ Features include:
 
 For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>WP Easy Gallery</a>
 
-Be sure to also check out these other plugins: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
+Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
+
+<a href='http://labs.hahncreativegroup.com/wordpress-plugins/'>Plugins for WordPress</a> by HahnCreativeGroup.
 
 == Screenshots ==
+
 1. PrettyPhoto style pop-up for image gallery
 2. Gallery Overview admin panel - easily maintain multiple galleries
 3. Add Galleries admin panel
@@ -53,10 +56,6 @@ Be sure to also check out these other plugins: <a href='http://labs.hahncreative
 
 * WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
 
-== Other Notes ==
-
-- Requires PHP 5
-
 == Changelog ==
 
 **Oct. 24, 2011 - v1.0**
@@ -79,3 +78,4 @@ Be sure to also check out these other plugins: <a href='http://labs.hahncreative
 **Jan. 9, 2012 - v1.3.1**
 
 * Fixed issue preventing custom database table prefixes from passing through on gallery specific code
+
