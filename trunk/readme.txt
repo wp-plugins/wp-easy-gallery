@@ -31,8 +31,8 @@ Pro features include:
 - Multiple image uploads to quickly populate your galleries
 - Improved admin panel for easier gallery and image navigation
 - Galleries use 1st image in gallery for thumbnail by default
-- Set global thumbnail dimensions for all galleries – can be overwritten for each gallery
-- Pop-up preview for each image – see how each gallery image will look in the pop-up window on your site
+- Set global thumbnail dimensions for all galleries (can be overwritten for each gallery)
+- Pop-up preview for each image (see how each gallery image will look in the pop-up window on your site)
 
 <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/'>Upgrade to WP Easy Gallery Pro</a>
 
@@ -92,4 +92,6 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 **Jan. 9, 2012 - v1.3.1**
 
 * Fixed issue preventing custom database table prefixes from passing through on gallery specific code
+
+
 
