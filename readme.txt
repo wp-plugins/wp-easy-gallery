@@ -12,6 +12,8 @@ WP Easy Gallery is a gallery plugin for WordPress that allows you to create and 
 
 WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to create and manage multiple image galleries through a simple admin interface.
 
+<a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/'>Upgrade to WP Easy Gallery Pro</a>
+
 Features include:
 
 - Upload unique thumbnail image and set custom dimensions
@@ -21,6 +23,18 @@ Features include:
 - And much more...
 
 For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>WP Easy Gallery</a>
+
+<a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/'>WP Easy Gallery Pro</a>
+
+Pro features include:
+
+- Multiple image uploads to quickly populate your galleries
+- Improved admin panel for easier gallery and image navigation
+- Galleries use 1st image in gallery for thumbnail by default
+- Set global thumbnail dimensions for all galleries – can be overwritten for each gallery
+- Pop-up preview for each image – see how each gallery image will look in the pop-up window on your site
+
+<a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/'>Upgrade to WP Easy Gallery Pro</a>
 
 Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
 
@@ -78,3 +92,4 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 **Jan. 9, 2012 - v1.3.1**
 
 * Fixed issue preventing custom database table prefixes from passing through on gallery specific code
+
