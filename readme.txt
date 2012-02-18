@@ -78,4 +78,3 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 **Jan. 9, 2012 - v1.3.1**
 
 * Fixed issue preventing custom database table prefixes from passing through on gallery specific code
-
