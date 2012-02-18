@@ -14,14 +14,14 @@
 	 * ================================================================================== 
 	 */
 	
+	global $wpdb;
 	global $easy_gallery_table;
 	global $easy_gallery_image_table;
-	global $easy_gallery_db_version;
-	global $wpdb;
+	global $easy_gallery_db_version;	
 	$easy_gallery_table = $wpdb->prefix . 'easy_gallery';
 	$easy_gallery_image_table = $wpdb->prefix . 'easy_gallery_images';
 	$easy_gallery_db_version = '1.1';
-	
+		
 	register_activation_hook( __FILE__,  'easy_gallery_install' );
 	
 	function easy_gallery_install() {
@@ -68,8 +68,7 @@
 	 * Include JS File in Header
 	 * ================================================================================== 
 	 */
-	
-	
+		
 	function attach_EasyGallery_jquery() {
 		wp_enqueue_script('jquery');
 	}
@@ -182,8 +181,7 @@
 		
 		$galleryLink = "<a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img src=\"".$gallery->thumbnail."\" width=\"".$gallery->thumbwidth."\" height=\"".$gallery->thumbheight."\" border=\"0\" /></a>";
 		return $galleryLink;
-	}
-	
+	}	
 	
 	function EasyGallery_Handler($atts) {
 	  return createEasyGallery($atts[id]);
