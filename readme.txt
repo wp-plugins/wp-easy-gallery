@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery
 Requires at least: 2.6
 Tested up to: 3.3.1
-Stable tag: 1.3.1
+Stable tag: 1.4
 
 WP Easy Gallery is a gallery plugin for WordPress that allows you to create and manage multiple image galleries through an easy to use admin interface.
 
@@ -31,12 +31,12 @@ Pro features include:
 - Multiple image uploads to quickly populate your galleries
 - Improved admin panel for easier gallery and image navigation
 - Galleries use 1st image in gallery for thumbnail by default
-- Set global thumbnail dimensions for all galleries (can be overwritten for each gallery)
-- Pop-up preview for each image (see how each gallery image will look in the pop-up window on your site)
+- Set global thumbnail dimensions for all galleries - can be overwritten for each gallery
+- Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
 
 <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/'>Upgrade to WP Easy Gallery Pro</a>
 
-Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
+Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, <a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
 
 <a href='http://labs.hahncreativegroup.com/wordpress-plugins/'>Plugins for WordPress</a> by HahnCreativeGroup.
 
@@ -92,3 +92,8 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 **Jan. 9, 2012 - v1.3.1**
 
 * Fixed issue preventing custom database table prefixes from passing through on gallery specific code
+
+**Feb. 25, 2012 - v1.4**
+
+* Bug fixes addressing undefined variable warnings
+
