@@ -97,3 +97,7 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 
 * Bug fixes addressing undefined variable warnings
 
+**Mar. 3, 2012 - v1.5**
+
+* Additional bug fixes
+
