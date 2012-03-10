@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 1.5
+	Version: 1.6
 	Author URI: http://labs.hahncreativegroup.com/
 	*/
 	
@@ -179,7 +179,7 @@
 		$desc = implode(", ", $descriptions);
 		$ttl = implode(", ", $titles);		
 		
-		$galleryLink = "<a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img src=\"".$gallery->thumbnail."\" width=\"".$gallery->thumbwidth."\" height=\"".$gallery->thumbheight."\" border=\"0\" /></a>";
+		$galleryLink = "<a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img src=\"".$gallery->thumbnail."\" width=\"".$gallery->thumbwidth."\" height=\"".$gallery->thumbheight."\" border=\"0\" alt=\"".$gallery->name."\" /></a>";
 		return $galleryLink;
 	}	
 	
