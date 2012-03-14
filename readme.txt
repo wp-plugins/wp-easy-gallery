@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery
 Requires at least: 2.6
 Tested up to: 3.3.1
-Stable tag: 1.6
+Stable tag: 1.7
 
 WP Easy Gallery is a gallery plugin for WordPress that allows you to create and manage multiple image galleries through an easy to use admin interface.
 
@@ -16,6 +16,7 @@ WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to cr
 
 Features include:
 
+- Newly added class name (wp-easy-galery) for easy thumbnail styling
 - Upload unique thumbnail image and set custom dimensions
 - Include multiple galleries on a page/post
 - Set the 'sort order' of images in the galleries
