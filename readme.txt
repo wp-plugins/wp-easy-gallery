@@ -41,6 +41,8 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 
 <a href='http://labs.hahncreativegroup.com/wordpress-plugins/'>Plugins for WordPress</a> by HahnCreativeGroup.
 
+<a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='images gallery'>images gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='Image Gallery'>image gallery for WordPress</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='gallery photo album'>gallery photo album</a>
+
 == Screenshots ==
 
 1. PrettyPhoto style pop-up for image gallery
