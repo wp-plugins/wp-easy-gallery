@@ -109,3 +109,4 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 **Mar. 10, 2012 - v1.6**
 
 * SEO enhancements
+
