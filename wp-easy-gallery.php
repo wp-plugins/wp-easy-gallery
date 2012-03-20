@@ -6,8 +6,7 @@
 	Author: HahnCreativeGroup
 	Version: 1.7
 	Author URI: http://labs.hahncreativegroup.com/
-	*/
-	
+	*/	
 	
 	/* ==================================================================================
 	 * Create custom database table
@@ -122,7 +121,6 @@
 
 		// Add a second submenu to the custom top-level menu:
 		add_submenu_page('hcg-admin', __('Easy Gallery >> Add Images','menu-hcg'), __('Add Images','menu-hcg'), 'manage_options', 'add-images', 'add_images');
-
 	}
 	
 	add_action( 'admin_menu', 'add_hcg_menu' );
@@ -186,6 +184,5 @@
 	function EasyGallery_Handler($atts) {
 	  return createEasyGallery($atts['id']);
   }
-  add_shortcode('EasyGallery', 'EasyGallery_Handler');
-	
+  add_shortcode('EasyGallery', 'EasyGallery_Handler');	
 ?>
