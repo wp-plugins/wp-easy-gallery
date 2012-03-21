@@ -41,7 +41,7 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 
 <a href='http://labs.hahncreativegroup.com/wordpress-plugins/'>Plugins for WordPress</a> by HahnCreativeGroup.
 
-<a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='images gallery'>images gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='Image Gallery'>image gallery for WordPress</a>
+<a href='http://labs.hahncreativegroup.com/tag/images-gallery/' title='images gallery'>images gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='Image Gallery'>image gallery for WordPress</a>
 
 == Screenshots ==
 
@@ -73,7 +73,7 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 
 * WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
 
-<a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='gallery photo album'>gallery photo album</a>
+<a href='http://labs.hahncreativegroup.com/tag/gallery-plugin/' title='gallery plugin'>gallery plugin</a>, , <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='gallery photo album'>gallery photo album</a>
 
 == Changelog ==
 
