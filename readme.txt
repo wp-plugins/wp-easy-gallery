@@ -73,7 +73,7 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 
 * WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
 
-<a href='http://labs.hahncreativegroup.com/tag/gallery-plugin/' title='gallery plugin'>gallery plugin</a>, , <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='gallery photo album'>gallery photo album</a>
+<a href='http://labs.hahncreativegroup.com/tag/gallery-plugin/' title='gallery plugin'>gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='gallery photo album'>gallery photo album</a>
 
 == Changelog ==
 
