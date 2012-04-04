@@ -1,7 +1,7 @@
 === WP Easy Gallery ===
 Contributors: hahncgdev
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U
-Tags: admin, image, images, media, photo, photo albums, photos, picture, pictures, Post, slideshow, widgets, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery
+Tags: admin, image, images, media, photo, photo albums, photos, picture, pictures, Post, slideshow, widgets, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin
 Requires at least: 2.6
 Tested up to: 3.3.1
 Stable tag: 1.7
@@ -71,7 +71,7 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 
 * WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
 
-Keywords: <a href='http://labs.hahncreativegroup.com/tag/images-gallery/' title='images gallery'>images gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='Image Gallery'>image gallery for WordPress</a>, <a href='http://labs.hahncreativegroup.com/tag/gallery-plugin/' title='gallery plugin'>gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='gallery photo album'>gallery photo album</a>
+Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='Easy Image Gallery'>easy image gallery</a>, <a href='http://labs.hahncreativegroup.com/tag/images-gallery/' title='images gallery'>images gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='Image Gallery'>image gallery for WordPress</a>, <a href='http://labs.hahncreativegroup.com/tag/gallery-plugin/' title='gallery plugin'>gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='gallery photo album'>gallery photo album</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='WordPress photo gallery plugin'>WordPress photo gallery plugin</a>
 
 == Changelog ==
 
