@@ -34,7 +34,7 @@ Pro features include:
 - Galleries use 1st image in gallery for thumbnail by default
 - Set global thumbnail dimensions for all galleries - can be overwritten for each gallery
 - Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
-- German language support (Sprachunterstützung für Deutsch)
+- German language support (Sprachunterst&#252;tzung f&#252;r Deutsch)
 
 <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/'>Upgrade to WP Easy Gallery Pro</a>
 
