@@ -36,7 +36,7 @@ Pro features include:
 - Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
 - German language support (Sprachunterstutzung fur Deutsch)
 
-<a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/'>Upgrade to WP Easy Gallery Pro</a>
+<a href='http://labs.hahncreativegroup.com/easy-image-gallery/' title='easy image gallery'>Upgrade to WP Easy Gallery Pro</a>
 
 Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/'>WP Easy Gallery Pro</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, <a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
 
@@ -72,7 +72,7 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 
 * WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
 
-Keywords: <a href='http://labs.hahncreativegroup.com/tag/images-gallery/' title='images gallery'>images gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='Image Gallery'>image gallery for WordPress</a>, <a href='http://labs.hahncreativegroup.com/tag/gallery-plugin/' title='gallery plugin'>gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='gallery photo album'>gallery photo album</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='WordPress photo gallery plugin'>WordPress photo gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='Easy Image Gallery'>easy image gallery</a>
+Keywords: <a href='http://labs.hahncreativegroup.com/tag/images-gallery/' title='images gallery'>images gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='Image Gallery'>image gallery for WordPress</a>, <a href='http://labs.hahncreativegroup.com/tag/gallery-plugin/' title='gallery plugin'>gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='gallery photo album'>gallery photo album</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='WordPress photo gallery plugin'>WordPress photo gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/easy-image-gallery/' title='Easy Image Gallery'>easy image gallery</a>
 
 == Changelog ==
 
