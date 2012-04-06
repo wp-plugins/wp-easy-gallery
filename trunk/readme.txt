@@ -109,3 +109,7 @@ Keywords: <a href='http://labs.hahncreativegroup.com/tag/images-gallery/' title=
 
 * SEO enhancements
 
+**Mar. 13, 2012 - v1.7**
+
+* Critical bug fixes and code enhancements
+
