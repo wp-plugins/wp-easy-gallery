@@ -12,7 +12,7 @@ WP Easy Gallery is a gallery plugin for WordPress that allows you to create and 
 
 WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to create and manage multiple image galleries through a simple admin interface.
 
-<a href='http://labs.hahncreativegroup.com/wp-gallery-plugins/' title='WP Gallery Plugin'>Upgrade to WP Easy Gallery Pro</a>
+<a href='http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/' title='WP Gallery Plugin'>Upgrade to WP Easy Gallery Pro</a>
 
 Features include:
 
