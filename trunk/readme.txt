@@ -16,7 +16,7 @@ WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to cr
 
 Features include:
 
-- Newly added class name (wp-easy-galery) for easy thumbnail styling
+- Newly added class name (wp-easy-galery) for easy thumbnail styling 
 - Upload unique thumbnail image and set custom dimensions
 - Include multiple galleries on a page/post
 - Set the 'sort order' of images in the galleries
