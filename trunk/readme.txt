@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: admin, image, images, media, photo, photo albums, photos, picture, pictures, Post, slideshow, widgets, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins
 Requires at least: 2.6
 Tested up to: 3.3.1
-Stable tag: 1.7
+Stable tag: 1.8
 
 WP Easy Gallery is an image gallery plugin for WordPress.
 
@@ -118,3 +118,7 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 **Mar. 13, 2012 - v1.7**
 
 * Critical bug fixes and code enhancements
+
+**Apr. 18, 2012 - v1.8**
+
+* Vulnerability found and fixed in code base
