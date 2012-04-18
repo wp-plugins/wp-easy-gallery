@@ -7,7 +7,7 @@ $galleryResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_table" );
 
 //Select gallery
 if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) {
-	$gid = (isset($_POST['select_gallery'])) ? $_POST['select_gallery'] : $_POST['galleryId'];
+	$gid = (isset($_POST['select_gallery'])) ? mysql_real_escape_string($_POST['select_gallery']) : mysql_real_escape_string($_POST['galleryId']);
 	$imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gid ORDER BY sortOrder ASC" );
 	$gallery = $wpdb->get_row( "SELECT * FROM $easy_gallery_table WHERE Id = $gid" );
 }
