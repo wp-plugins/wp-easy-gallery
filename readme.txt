@@ -122,3 +122,4 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 **Apr. 18, 2012 - v1.8**
 
 * Vulnerability found and fixed in code base
+
