@@ -3,7 +3,7 @@ Contributors: hahncgdev
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U
 Tags: admin, image, images, media, photo, photo albums, photos, picture, pictures, Post, slideshow, widgets, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins
 Requires at least: 2.6
-Tested up to: 3.3.1
+Tested up to: 3.3.2
 Stable tag: 1.8
 
 WP Easy Gallery is an image gallery plugin for WordPress.
@@ -11,6 +11,8 @@ WP Easy Gallery is an image gallery plugin for WordPress.
 == Description ==
 
 WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to create and manage multiple image galleries through a simple admin interface.
+
+Comfirmed compatibility with WordPress 3.3.2
 
 Features include:
 
@@ -32,13 +34,13 @@ Pro features include:
 - Galleries use 1st image in gallery for thumbnail by default
 - Set global thumbnail dimensions for all galleries - can be overwritten for each gallery
 - Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
-- German language support (Sprachunterstutzung fur Deutsch)
+- German language support (Sprachunterstutzung fur Deutsch) (<a href='http://labs.hahncreativegroup.com/easy-image-gallery/' title='easy image gallery'>Pro Version</a>)
 
 <a href='http://labs.hahncreativegroup.com/easy-image-gallery/' title='easy image gallery'>Upgrade to WP Easy Gallery Pro</a>
 
 Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/easy-image-gallery/' title='Easy Image Gallery'>WP Easy Gallery Pro</a>, <a href='http://labs.hahncreativegroup.com/paypal-for-wordpress/' title='PayPal for WordPress'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, <a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
 
-**License Notice**
+### License Notice
 
 The developer of this plugin is not in any way affiliated to the developer of the prettyPhoto jQuery plugin.
 prettyPhoto is being developed by [Stephane Caron](http://www.no-margin-for-errors.com) and licensed under the [GPLv2 license](http://www.gnu.org/licenses/gpl-2.0.html). As the developer states, prettyPhoto is "totally free to use (...) in all projects, even commercial ones".
@@ -122,4 +124,3 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 **Apr. 18, 2012 - v1.8**
 
 * Vulnerability found and fixed in code base
-
