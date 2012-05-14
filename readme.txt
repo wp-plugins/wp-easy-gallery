@@ -12,8 +12,6 @@ WP Easy Gallery is an image gallery plugin for WordPress.
 
 WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to create and manage multiple image galleries through a simple admin interface.
 
-Comfirmed compatibility with WordPress 3.3.2
-
 Features include:
 
 - Newly added class name (wp-easy-galery) for easy thumbnail styling
