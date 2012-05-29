@@ -23,7 +23,7 @@ Features include:
 
 For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>WP Easy Gallery</a>
 
-<a href='http://labs.hahncreativegroup.com/wp-gallery-plugins/' title='WP Gallery Plugins'>WP Easy Gallery Pro Plugin</a>
+<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='image gallery'>WP Easy Gallery Pro Plugin</a>
 
 Pro features include:
 
@@ -34,9 +34,9 @@ Pro features include:
 - Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
 - German language support (Sprachunterstutzung fur Deutsch) (<a href='http://labs.hahncreativegroup.com/easy-image-gallery/' title='easy image gallery'>Pro Version</a>)
 
-<a href='http://labs.hahncreativegroup.com/easy-image-gallery/' title='easy image gallery'>Upgrade to WP Easy Gallery Pro</a>
+<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress gallery plugin'>Upgrade to WP Easy Gallery Pro</a>
 
-Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/easy-image-gallery/' title='Easy Image Gallery'>WP Easy Gallery Pro</a>, <a href='http://labs.hahncreativegroup.com/paypal-for-wordpress/' title='PayPal for WordPress'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, <a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
+Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WP Easy Gallery Pro</a>, <a href='http://labs.hahncreativegroup.com/paypal-for-wordpress/' title='PayPal for WordPress'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, <a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
 
 ### License Notice
 
@@ -79,6 +79,8 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 **Why can't I add galleries to my site?**
 
 * WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
+
+Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>image gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='simple image gallery pro'>simple image gallery pro</a>, <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='simple image gallery'>simple image gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Photo Gallery Plugin'>photo gallery</a>
 
 == Changelog ==
 
