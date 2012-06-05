@@ -69,10 +69,16 @@
 	 * ================================================================================== 
 	 */
 		
-	function attach_EasyGallery_jquery() {
+	function attach_EasyGallery_scripts() {
 		wp_enqueue_script('jquery');
+		wp_register_script('prettyPhoto', WP_PLUGIN_URL.'/wp-easy-gallery/js/jquery.prettyPhoto.js', array('jquery'));
+		wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader.js', array('prettyPhoto', 'jquery'));
+		wp_enqueue_script('prettyPhoto');
+		wp_enqueue_script('easyGalleryLoader');
+		wp_register_style( 'prettyPhoto_stylesheet', WP_PLUGIN_URL.'/wp-easy-gallery/css/prettyPhoto.css');
+		wp_enqueue_style('prettyPhoto_stylesheet');
 	}
-	add_action('wp_enqueue_scripts', 'attach_EasyGallery_jquery');
+	add_action('wp_enqueue_scripts', 'attach_EasyGallery_scripts');
 	
 	function attach_Easy_Gallery_JS()
 	{
@@ -83,12 +89,7 @@
 			define( 'HCGGALLERY_PLUGIN_NAME', trim( dirname( HCGGALLERY_PLUGIN_BASENAME ), '/' ) );
 		
 		if ( ! defined( 'HCGGALLERY_PLUGIN_DIR' ) )
-			define( 'HCGGALLERY_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . HCGGALLERY_PLUGIN_NAME );		
-		
-		$scripts = "<link rel=\"stylesheet\" href=\"".get_settings('home') . "/wp-content/plugins/".HCGGALLERY_PLUGIN_NAME."/css/prettyPhoto.css\" type=\"text/css\" media=\"screen\" title=\"prettyPhoto main stylesheet\" charset=\"utf-8\" />\n";
-		$scripts = $scripts."<script type=\"text/javascript\" src=\"" . get_settings('home') . "/wp-content/plugins/".HCGGALLERY_PLUGIN_NAME."/js/jquery.prettyPhoto.js\"></script>\n";
-		$scripts = $scripts."<script type=\"text/javascript\" src=\"" . get_settings('home') . "/wp-content/plugins/".HCGGALLERY_PLUGIN_NAME."/js/HcgGalleryLoader.js\"></script>\n";
-		echo $scripts; 
+			define( 'HCGGALLERY_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . HCGGALLERY_PLUGIN_NAME );
 	}
 	
 	add_action ('wp_head', 'attach_Easy_Gallery_JS');

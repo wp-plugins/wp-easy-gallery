@@ -1,12 +1,12 @@
 === WP Easy Gallery ===
 Contributors: hahncgdev
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U
-Tags: admin, image, images, media, photo, photo albums, photos, picture, pictures, Post, slideshow, widgets, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins
+Tags: admin, image, images, media, photo, photo albums, photos, picture, pictures, Post, slideshow, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins
 Requires at least: 2.6
 Tested up to: 3.3.2
-Stable tag: 1.8
+Stable tag: 1.9
 
-WP Easy Gallery is an image gallery plugin for WordPress.
+WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
 == Description ==
 
@@ -14,7 +14,7 @@ WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to cr
 
 Features include:
 
-- Newly added class name (wp-easy-galery) for easy thumbnail styling
+- Newly added class name (wp-easy-gallery) for easy thumbnail styling
 - Upload unique thumbnail image and set custom dimensions
 - Include multiple galleries on a page/post
 - Set the 'sort order' of images in the galleries
@@ -32,7 +32,7 @@ Pro features include:
 - Galleries use 1st image in gallery for thumbnail by default
 - Set global thumbnail dimensions for all galleries - can be overwritten for each gallery
 - Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
-- German language support (Sprachunterstutzung fur Deutsch) (<a href='http://labs.hahncreativegroup.com/easy-image-gallery/' title='easy image gallery'>Pro Version</a>)
+- German language support (Sprachunterstutzung fur Deutsch) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro Version</a>)
 
 <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress gallery plugin'>Upgrade to WP Easy Gallery Pro</a>
 
@@ -80,7 +80,7 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 
 * WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
 
-Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>image gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='simple image gallery pro'>simple image gallery pro</a>, <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='simple image gallery'>simple image gallery</a>, <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Photo Gallery Plugin'>photo gallery</a>
+Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>
 
 == Changelog ==
 
@@ -123,4 +123,8 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 **Apr. 18, 2012 - v1.8**
 
-* Vulnerability found and fixed in code base
+* Fixed vulnerability found in code base: Input passed via the "select_gallery" or "galleryId" parameter to wp-admin/admin.php (when "page" is set to "edit-gallery") is not properly sanitised in wp-content/plugins/wp-easy-gallery/admin/edit-gallery.php before being returned to the user.
+
+**Jun. 5, 2012 - v1.9**
+
+* Changed the manner in which JS files are called into theme
