@@ -1,4 +1,6 @@
 <?php
+if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
+
 $galleryName = '';
 $galleryDescription = '';	  
 $slug = '';
@@ -48,7 +50,8 @@ $galleryAdded = false;
 	?>
     <p>This is where you can create new galleries. Once the new gallery has been added, a short code will be provided for use in posts.</p>
     <?php } ?>
-	
+	<p style="float: right;"><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><strong><em>Try WP Easy Gallery Pro</em></strong></a></p>
+    <div style="Clear: both;"></div>
     <form name="hcg_add_gallery_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
     <input type="hidden" name="hcg_add_gallery" value="true" />
     <table class="widefat post fixed" cellspacing="0">

@@ -1,4 +1,6 @@
 <?php
+if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
+
 global $wpdb;
 global $easy_gallery_table;
 
@@ -16,6 +18,8 @@ $galleryResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_table" );
 <div class='wrap'>
 	<h2>Easy Gallery</h2>
     <p>This is a listing of all galleries.</p>
+    <p style="float: right;"><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><strong><em>Try WP Easy Gallery Pro</em></strong></a></p>
+    <div style="Clear: both;"></div>
     <table class="widefat post fixed" cellspacing="0">
     	<thead>
         <tr>
@@ -50,6 +54,7 @@ $galleryResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_table" );
         </tbody>
      </table>
      <br />
+     <p><em><strong><a href="http://my.ambassadorsforlife.org/campaign/hahncreativegroup/" target="_blank">Help Fight Hunger</a>!</strong></em></p>
      <p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
 <br />

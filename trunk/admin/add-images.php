@@ -1,4 +1,6 @@
 <?php
+if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
+
 global $wpdb;
 global $easy_gallery_table;
 global $easy_gallery_image_table;
@@ -161,6 +163,7 @@ if(isset($_POST['delete_image'])) {
      </table>
      <?php } ?>
      <br />
+     <p><em><strong><a href="http://my.ambassadorsforlife.org/campaign/hahncreativegroup/" target="_blank">Help Fight Hunger</a>!</strong></em></p>
      <p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
 <br />

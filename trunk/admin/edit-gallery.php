@@ -1,4 +1,6 @@
 <?php
+if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
+
 global $wpdb;
 global $easy_gallery_table;
 global $easy_gallery_image_table;
@@ -50,13 +52,15 @@ if(isset($_POST['hcg_edit_gallery']))
     </form>
     <?php } else if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) { ?>    
     <h3>Gallery: <?php echo $gallery->name; ?></h3>
+    
     <form name="switch_gallery" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
     <input type="hidden" name="switch" value="true" />
     <p><input type="submit" name="Submit" class="button-primary" value="Switch Gallery" /></p>
     </form>
 	
     <p>This is where you can edit existing galleries.</p>
-    
+    <p style="float: right;"><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><strong><em>Try WP Easy Gallery Pro</em></strong></a></p>
+    <div style="Clear: both;"></div>
     <form name="hcg_add_gallery_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
     <input type="hidden" name="hcg_edit_gallery" value="<?php echo $gid; ?>" />
     <table class="widefat post fixed" cellspacing="0">
@@ -111,6 +115,7 @@ if(isset($_POST['hcg_edit_gallery']))
     </form>
     <?php } ?>
     <br />
+    <p><em><strong><a href="http://my.ambassadorsforlife.org/campaign/hahncreativegroup/" target="_blank">Help Fight Hunger</a>!</strong></em></p>
      <p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
 <br />
