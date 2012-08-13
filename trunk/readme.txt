@@ -83,7 +83,7 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 
 * WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
 
-Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>, <a href='http://www.wordpress-photo-gallery.com/' title='ReFlex Gallery - Responsive WordPress Photo Gallery Plugin'>WordPress Photo Gallery</a>
+Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>, <a href='http://www.wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery Plugin'>WordPress Photo Gallery</a>
 
 == Changelog ==
 
