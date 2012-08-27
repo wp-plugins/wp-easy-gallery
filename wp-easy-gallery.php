@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 2.0
+	Version: 2.1
 	Author URI: http://labs.hahncreativegroup.com/
 	*/
 	
@@ -123,6 +123,9 @@
 
 		// Add a second submenu to the custom top-level menu:
 		add_submenu_page('hcg-admin', __('Easy Gallery >> Add Images','menu-hcg'), __('Add Images','menu-hcg'), 'manage_options', 'add-images', 'add_images');
+		
+		// Add a second submenu to the custom top-level menu:
+		add_submenu_page('hcg-admin', __('Easy Gallery >> Help (FAQ)','menu-hcg'), __('Help (FAQ)','menu-hcg'), 'manage_options', 'help', 'help');
 
 	}
 	
@@ -146,6 +149,11 @@
 	function add_images()
 	{
 		include("admin/add-images.php");
+	}
+	
+	function help()
+	{
+		include("admin/help.php");
 	}
 	
 	/* ==================================================================================
