@@ -53,7 +53,7 @@ if(isset($_POST['delete_image'])) {
 
 ?>
 
-<div class='wrap'>
+<div class='wrap wp-easy-gallery'>
 	<h2>Easy Gallery</h2>    
     <p>Add new images to gallery</p>
 	<?php if(!isset($_POST['select_gallery']) && !isset($_POST['galleryId'])) { ?>
@@ -80,14 +80,14 @@ if(isset($_POST['delete_image'])) {
     
     <form name="add_image_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
     <input type="hidden" name="galleryId" value="<?php echo $gallery->Id; ?>" />
-    <table class="widefat post fixed" cellspacing="0">
+    <table class="widefat post fixed eg-table">
     	<thead>
         <tr>
-            <th width="340">Image Path</th>
-            <th width="150">Image Title</th>
+            <th class="eg-cell-spacer-340">Image Path</th>
+            <th class="eg-cell-spacer-150">Image Title</th>
             <th>Image Description</th>
-            <th width="90">Sort Order</th>
-            <th width="115"></th>
+            <th class="eg-cell-spacer-90">Sort Order</th>
+            <th class="eg-cell-spacer-115"></th>
         </tr>
         </thead>
         <tfoot>
@@ -118,12 +118,12 @@ if(isset($_POST['delete_image'])) {
      <br />
      <hr />
      <p>Edit existing images in this gallery</p>
-    <table class="widefat post fixed" cellspacing="0">
+    <table class="widefat post fixed eg-table">
     	<thead>
         <tr>
-        	<th width="80">Image Preview</th>
-            <th width="700">Image Info</th>
-            <th width="115"></th>
+        	<th class="eg-cell-spacer-80">Image Preview</th>
+            <th class="eg-cell-spacer-700">Image Info</th>
+            <th class="eg-cell-spacer-115"></th>
             <th></th>
         </tr>
         </thead>
@@ -138,7 +138,7 @@ if(isset($_POST['delete_image'])) {
         <tbody>        	
         	<?php foreach($imageResults as $image) { ?>				
             <tr>
-            	<td><img src="<?php echo $image->imagePath; ?>" width="75" border="0" /></td>
+            	<td><img src="<?php echo $image->imagePath; ?>" width="75" alt="" /></td>
                 <td>
                 	<form name="edit_image_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
                 	<input type="hidden" name="edit_image" value="<?php echo $image->Id; ?>" />
@@ -146,10 +146,10 @@ if(isset($_POST['delete_image'])) {
                     <p><strong>Image Title:</strong> <input type="text" name="edit_imageTitle" size="20" value="<?php echo $image->title; ?>" /></p>
                     <p><strong>Image Description:</strong> <input type="text" name="edit_imageDescription" size="75" value="<?php echo $image->description; ?>" /></p>
                     <p><strong>Sort Order:</strong> <input type="text" name="edit_imageSort" size="10" value="<?php echo $image->sortOrder; ?>" /></p>
+                    <p class="major-publishing-actions"><input type="submit" name="Submit" class="button-primary" value="Save Image" /></p>
+                    </form>
                 </td>
                 <td class="major-publishing-actions">                
-                <input type="submit" name="Submit" class="button-primary" value="Edit Image" />
-                </form>
                 </td>
                 <td class="major-publishing-actions">
                 <form name="delete_image_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
@@ -164,13 +164,13 @@ if(isset($_POST['delete_image'])) {
      <?php } ?>
      <br />
 <p><strong>Try WP Easy Gallery Pro</strong><br /><em>Pro Features include: Multi-image uploader, Enhanced admin section for easier navigation, Image preview pop-up, and more...</em></p>
-<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><img title="WP-Easy-Gallery-Pro_468x88" src="http://labs.hahncreativegroup.com/wp-content/uploads/2012/02/WP-Easy-Gallery-Pro_468x88.gif" alt="" border="0" width="468" height="88" /></a></p>
+<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><img title="WP-Easy-Gallery-Pro_468x88" src="http://labs.hahncreativegroup.com/wp-content/uploads/2012/02/WP-Easy-Gallery-Pro_468x88.gif" alt="" width="468" height="88" /></a></p>
 <p><strong>Try Custom Post Donations Pro</strong><br /><em>This WordPress plugin will allow you to create unique customized PayPal donation widgets to insert into your WordPress posts or pages and accept donations. Features include: Multiple Currencies, Multiple PayPal accounts, Custom donation form display titles, and more.</em></p>
-<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/?src=wpeg"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" border="0" alt="Custom Post Donations Pro" /></a></p>
+<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/?src=wpeg"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" alt="Custom Post Donations Pro" /></a></p>
 <p><strong>Try ReFlex Gallery</strong><br /><em>A fully responsive WordPress image gallery plugin that is actually two galleries in one.</em><br />
 <a href="http://wordpress-photo-gallery.com/" target="_blank">ReFlex Gallery</a></p>
 <p><strong>Try Email Obfuscate</strong><br /><em>Email Obfuscate is a Lightweight jQuery plugin that prevents spam-bots from harvesting your email addresses by dynamically obfuscating email addresses on your site.</em><br /><a href="http://codecanyon.net/item/jquery-email-obfuscate-plugin/721738/?ref=HahnCreativeGroup" target="_blank">Email Obfuscate Plugin</a></p>
 <br />
 <p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
-<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="PayPal - The safer, easier way to pay online!"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
 </div>
