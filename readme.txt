@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image, images, media, photo, photo albums, photos, picture, pictures, Post, posts, plugin, slideshow, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 2.6
 Tested up to: 3.4.2
-Stable tag: 2.2
+Stable tag: 2.3
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
@@ -143,3 +143,7 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 **Sept. 20, 2012 - v2.2**
 
 * Code fixes to admin pages to fix HTML validation issues
+
+**Oct. 1, 2012 - v2.3**
+
+* Updated Add Images interface for easier deletion of images

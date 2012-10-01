@@ -8,4 +8,6 @@
 .eg-cell-spacer-250 {width: 250px;}
 .eg-cell-spacer-340 {width: 340px;}
 .eg-cell-spacer-700 {width: 700px;}
+.left-float {float: left;}
+.eg-right-margin input {margin-right: 15px;}
 

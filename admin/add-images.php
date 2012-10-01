@@ -123,16 +123,14 @@ if(isset($_POST['delete_image'])) {
         <tr>
         	<th class="eg-cell-spacer-80">Image Preview</th>
             <th class="eg-cell-spacer-700">Image Info</th>
-            <th class="eg-cell-spacer-115"></th>
-            <th></th>
+            <th></th>            
         </tr>
         </thead>
         <tfoot>
         <tr>
         	<th>Image Preview</th>
             <th>Image Info</th>
-            <th></th>
-            <th></th>
+            <th></th>            
         </tr>
         </tfoot>
         <tbody>        	
@@ -146,17 +144,15 @@ if(isset($_POST['delete_image'])) {
                     <p><strong>Image Title:</strong> <input type="text" name="edit_imageTitle" size="20" value="<?php echo $image->title; ?>" /></p>
                     <p><strong>Image Description:</strong> <input type="text" name="edit_imageDescription" size="75" value="<?php echo $image->description; ?>" /></p>
                     <p><strong>Sort Order:</strong> <input type="text" name="edit_imageSort" size="10" value="<?php echo $image->sortOrder; ?>" /></p>
-                    <p class="major-publishing-actions"><input type="submit" name="Submit" class="button-primary" value="Save Image" /></p>
+                    <div style="clear:both;"></div>
+                    <p class="major-publishing-actions left-float eg-right-margin"><input type="submit" name="Submit" class="button-primary" value="Save Image" /></p>
+                    </form>                    
+                    <form name="delete_image_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
+                    <input type="hidden" name="delete_image" value="<?php echo $image->Id; ?>" />
+                    <p class="major-publishing-actions left-float"><input type="submit" name="Submit" class="button-primary" value="Delete Image" /></p>
                     </form>
                 </td>
-                <td class="major-publishing-actions">                
-                </td>
-                <td class="major-publishing-actions">
-                <form name="delete_image_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
-                <input type="hidden" name="delete_image" value="<?php echo $image->Id; ?>" />
-                <input type="submit" name="Submit" class="button-primary" value="Delete Image" />
-                </form>
-                </td>
+                <td></td>                
             </tr>
 			<?php } ?>
         </tbody>
