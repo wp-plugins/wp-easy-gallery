@@ -24,8 +24,6 @@ if(isset($_POST['hcg_edit_gallery']))
 	  $thumbwidth = $_POST['gallerythumbwidth'];
 	  $thumbheight = $_POST['gallerythumbheight'];
 	  
-	  
-	  
 	  if(isset($_POST['hcg_edit_gallery'])) {
 		  $imageEdited = $wpdb->update( $easy_gallery_table, array( 'name' => $galleryName, 'slug' => $slug, 'description' => $galleryDescription, 'thumbnail' => $imagepath, 'thumbwidth' => $thumbwidth, 'thumbheight' => $thumbheight ), array( 'Id' => $_POST['hcg_edit_gallery'] ) );
 			  
@@ -106,7 +104,7 @@ if(isset($_POST['hcg_edit_gallery']))
                 <td>This is the height of the gallery thumbnail image.</td>
             </tr>
             <tr>
-            	<td class="major-publishing-actions"><input type="submit" name="Submit" class="button-primary" value="Edit Gallery" /></td>
+            	<td class="major-publishing-actions"><input type="submit" name="Submit" class="button-primary" value="Save Changes" /></td>
                 <td></td>
                 <td></td>
             </tr>

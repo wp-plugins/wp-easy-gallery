@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 2.3
+	Version: 2.4
 	Author URI: http://labs.hahncreativegroup.com/
 	*/
 	
@@ -189,9 +189,12 @@
 		
 		$img = implode(", ", $images);
 		$desc = implode(", ", $descriptions);
-		$ttl = implode(", ", $titles);		
+		$ttl = implode(", ", $titles);
 		
-		$galleryLink = "<a class=\"wp-easy-gallery\" onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img src=\"".$gallery->thumbnail."\" width=\"".$gallery->thumbwidth."\" height=\"".$gallery->thumbheight."\" border=\"0\" alt=\"".$gallery->name."\" /></a>";
+		$thumbwidth = ($gallery->thumbwidth < 1 || $gallery->thumbwidth == "auto") ? "" : "width='".$gallery->thumbwidth."'";
+		$thumbheight = ($gallery->thumbheight < 1 || $gallery->thumbheight == "auto") ? "" : "height='".$gallery->thumbheight."'";
+		
+		$galleryLink = "<a class=\"wp-easy-gallery\" onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a>";
 		return $galleryLink;
 	}	
 	

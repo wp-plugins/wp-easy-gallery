@@ -7,7 +7,7 @@ jQuery('#upload_image_button').click(function() {
 });
 
 window.send_to_editor = function(html) {
- imgurl = jQuery('img',html).attr('src');
+ imgurl = jQuery('img', html).attr('src');
  jQuery('#upload_image').val(imgurl);
  tb_remove();
 }
