@@ -54,6 +54,7 @@ $galleryResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_table" );
         </tbody>
      </table>
      <br />
+<div style="float: left; width: 60%; min-width: 488px;">     
 <p><strong>Try WP Easy Gallery Pro</strong><br /><em>Pro Features include: Multi-image uploader, Enhanced admin section for easier navigation, Image preview pop-up, and more...</em></p>
 <p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><img title="WP-Easy-Gallery-Pro_468x88" src="http://labs.hahncreativegroup.com/wp-content/uploads/2012/02/WP-Easy-Gallery-Pro_468x88.gif" alt="" width="468" height="88" /></a></p>
 <p><strong>Try Custom Post Donations Pro</strong><br /><em>This WordPress plugin will allow you to create unique customized PayPal donation widgets to insert into your WordPress posts or pages and accept donations. Features include: Multiple Currencies, Multiple PayPal accounts, Custom donation form display titles, and more.</em></p>
@@ -64,4 +65,30 @@ $galleryResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_table" );
 <br />
 <p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="PayPal - The safer, easier way to pay online!"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
+</div>
+<div style="float: right; width: 25%; height: 700px; padding: 10px; min-width: 165px;">
+<?php
+$url = "http://labs.hahncreativegroup.com/feed/";
+$rss = simplexml_load_file($url);
+if($rss)
+{
+  echo '<h3>'.$rss->channel->title.'</h3>';
+  $items = $rss->channel->item;
+  $count = 0;
+  foreach($items as $item)
+  {
+	$count++;	
+	$title = $item->title;
+	$link = $item->link;
+	$published_on = $item->pubDate;
+	$description = $item->description;
+	echo '<h4><a href="'.$link.'">'.$title.'</a></h4>';
+	echo '<p>'.$description.'</p>';
+	if ($count >= 5) {
+		break;	
+	}
+  }
+}
+?>
+</div>
 </div>

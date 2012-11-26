@@ -4,10 +4,9 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 2.4
+	Version: 2.5
 	Author URI: http://labs.hahncreativegroup.com/
-	*/
-	
+	*/	
 	
 	/* ==================================================================================
 	 * Create custom database table

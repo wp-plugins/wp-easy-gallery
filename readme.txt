@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image, images, media, photo, photo albums, photos, picture, pictures, Post, posts, plugin, slideshow, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 2.6
 Tested up to: 3.4.2
-Stable tag: 2.4
+Stable tag: 2.5
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
@@ -14,6 +14,7 @@ WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to cr
 
 Features include:
 
+- Enhanced social sharing capabilites for images
 - Newly added class name (wp-easy-gallery) for easy thumbnail styling
 - Upload unique thumbnail image and set custom dimensions
 - Include multiple galleries on a page/post
@@ -25,7 +26,7 @@ For more information about this wordpress gallery plugin: <a href='http://labs.h
 
 Also try <a href='http://wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery</a> - ReFlex Gallery is a fully responsive WordPress image gallery plugin that is actually two galleries in one.
 
-<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='image gallery'>WP Easy Gallery Pro Plugin</a> - (Marked down for Thanksgiving!)
+<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='image gallery'>WP Easy Gallery Pro Plugin</a>
 
 Pro features include:
 
@@ -38,7 +39,7 @@ Pro features include:
 - Spanish Translation Added (Traducci&oacute;n al espa&ntilde;ol a&ntilde;adi&oacute;) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro Version</a>)
 - Portuguese Translation Added (Tradu&ccedil;&atilde;o Portugu&ecirc;s Adicionado) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro Version</a>)
 
-<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress gallery plugin'>Upgrade to WP Easy Gallery Pro</a> - (Marked down for Thanksgiving!)
+<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress gallery plugin'>Upgrade to WP Easy Gallery Pro</a>
 
 Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WP Easy Gallery Pro</a>, <a href='http://wordpress.org/extend/plugins/reflex-gallery/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery</a>, <a href='http://wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery Pro</a>, <a href='http://labs.hahncreativegroup.com/paypal-for-wordpress/' title='PayPal for WordPress'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, <a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a>, <a href="http://codecanyon.net/item/jquery-email-obfuscate-plugin/721738/?ref=HahnCreativeGroup">Email Obfuscate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
 
@@ -88,67 +89,71 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 == Changelog ==
 
-**Oct. 24, 2011 - v1.0**
+**Nov. 25, 2012 - v2.5**
 
-* Initial release.
+* Updated prettyPhoto.js jQuery script to version 3.1.4 for various bug fixes and added social sharing abilities
 
-**Nov. 7, 2011 - v1.1**
+**Nov. 8, 2012 - v2.4**
 
-* Fixed bug that caused screen jumping when gallery launched.
+* Added handling for default thumbnail dimensions
+
+**Oct. 1, 2012 - v2.3**
+
+* Updated Add Images interface for easier deletion of images
+
+**Sept. 20, 2012 - v2.2**
+
+* Code fixes to admin pages to fix HTML validation issues
+
+**Aug. 26, 2012 - v2.1**
+
+* Added Help (FAQ) page to plugin
+
+**Jun. 27, 2012 - v2.0**
+
+* Tighted security against remote scripting attacks
+
+**Jun. 5, 2012 - v1.9**
+
+* Changed the manner in which JS files are called into theme
+
+**Apr. 18, 2012 - v1.8**
+
+* Fixed vulnerability found in code base: Input passed via the "select_gallery" or "galleryId" parameter to wp-admin/admin.php (when "page" is set to "edit-gallery") is not properly sanitised in wp-content/plugins/wp-easy-gallery/admin/edit-gallery.php before being returned to the user.
+
+**Mar. 13, 2012 - v1.7**
+
+* Critical bug fixes and code enhancements
+
+**Mar. 10, 2012 - v1.6**
+
+* SEO enhancements
+
+**Mar. 3, 2012 - v1.5**
+
+* Additional bug fixes
+
+**Feb. 25, 2012 - v1.4**
+
+* Bug fixes addressing undefined variable warnings
+
+**Jan. 9, 2012 - v1.3.1**
+
+* Fixed issue preventing custom database table prefixes from passing through on gallery specific code
+
+**Dec. 9, 2011 - v1.3**
+
+* Fixed issue preventing custom database table prefixes from passing through
 
 **Nov. 14, 2011 - v1.2**
 
 * Cursor now shows pointer when gallery thumbnail is in hover state.
 * Added functionality to show gallery name on hover.
 
-**Dec. 9, 2011 - v1.3**
+**Nov. 7, 2011 - v1.1**
 
-* Fixed issue preventing custom database table prefixes from passing through
+* Fixed bug that caused screen jumping when gallery launched.
 
-**Jan. 9, 2012 - v1.3.1**
+**Oct. 24, 2011 - v1.0**
 
-* Fixed issue preventing custom database table prefixes from passing through on gallery specific code
-
-**Feb. 25, 2012 - v1.4**
-
-* Bug fixes addressing undefined variable warnings
-
-**Mar. 3, 2012 - v1.5**
-
-* Additional bug fixes
-
-**Mar. 10, 2012 - v1.6**
-
-* SEO enhancements
-
-**Mar. 13, 2012 - v1.7**
-
-* Critical bug fixes and code enhancements
-
-**Apr. 18, 2012 - v1.8**
-
-* Fixed vulnerability found in code base: Input passed via the "select_gallery" or "galleryId" parameter to wp-admin/admin.php (when "page" is set to "edit-gallery") is not properly sanitised in wp-content/plugins/wp-easy-gallery/admin/edit-gallery.php before being returned to the user.
-
-**Jun. 5, 2012 - v1.9**
-
-* Changed the manner in which JS files are called into theme
-
-**Jun. 27, 2012 - v2.0**
-
-* Tighted security against remote scripting attacks
-
-**Aug. 26, 2012 - v2.1**
-
-* Added Help (FAQ) page to plugin
-
-**Sept. 20, 2012 - v2.2**
-
-* Code fixes to admin pages to fix HTML validation issues
-
-**Oct. 1, 2012 - v2.3**
-
-* Updated Add Images interface for easier deletion of images
-
-**Nov. 8, 2012 - v2.4**
-
-* Added handling for default thumbnail dimensions
+* Initial release.
