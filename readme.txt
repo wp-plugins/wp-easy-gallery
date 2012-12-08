@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image, images, media, photo, photo albums, photos, picture, pictures, Post, posts, plugin, slideshow, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 2.6
 Tested up to: 3.4.2
-Stable tag: 2.5
+Stable tag: 2.6
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
@@ -32,6 +32,8 @@ Pro features include:
 
 - Multiple image uploads to quickly populate your galleries
 - Improved admin panel for easier gallery and image navigation
+- Ability to show or hide social sharing buttons
+- Ability to show or hide gallery overlay
 - Galleries use 1st image in gallery for thumbnail by default
 - Set global thumbnail dimensions for all galleries - can be overwritten for each gallery
 - Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
@@ -89,6 +91,11 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>, <a href='http://www.wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery Plugin'>WordPress Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/reflex-gallery/' title='Responsive Photo Gallery'>Responsive Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/galeria-de-imagenes-wordpress/' title='Galeria de Imagenes WordPress'>Galeria de Imagenes WordPress</a>
 
 == Changelog ==
+
+**Dec. 8, 2012 - 2.6**
+
+* Style update to fix social sharing button layout issue
+* Addition of settings page and functionality to hide thumbnail overlay from settings
 
 **Nov. 25, 2012 - v2.5**
 

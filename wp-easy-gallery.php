@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 2.5
+	Version: 2.6
 	Author URI: http://labs.hahncreativegroup.com/
 	*/	
 	
@@ -67,11 +67,32 @@
 	 * Include JS File in Header
 	 * ================================================================================== 
 	 */
+	 
+	 function define_options() {
+		 if(!get_option('wp_easy_gallery_defaults')) {
+				$gallery_options = array(
+					'version'		   => 'free',
+					'thumbnail_width'  => 'auto',
+					'thunbnail_height' => 'auto',
+					'hide_overlay'	   => 'false',
+					'hide_social'	   => 'false'
+				);
+				
+				add_option('wp_easy_gallery_defaults', $gallery_options);
+			}
+	 }
+	 add_action('init', 'define_options');
 		
 	function attach_EasyGallery_scripts() {
+		$wpEasyGalleryOptions = get_option('wp_easy_gallery_defaults');
 		wp_enqueue_script('jquery');
 		wp_register_script('prettyPhoto', WP_PLUGIN_URL.'/wp-easy-gallery/js/jquery.prettyPhoto.js', array('jquery'));
-		wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader.js', array('prettyPhoto', 'jquery'));
+		if ($wpEasyGalleryOptions['hide_overlay'] == 'true') {
+			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader_hideOverlay.js', array('prettyPhoto', 'jquery'));
+		}
+		else {
+			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader.js', array('prettyPhoto', 'jquery'));
+		}
 		wp_enqueue_script('prettyPhoto');
 		wp_enqueue_script('easyGalleryLoader');
 		wp_register_style( 'prettyPhoto_stylesheet', WP_PLUGIN_URL.'/wp-easy-gallery/css/prettyPhoto.css');
@@ -124,6 +145,9 @@
 		add_submenu_page('hcg-admin', __('Easy Gallery >> Add Images','menu-hcg'), __('Add Images','menu-hcg'), 'manage_options', 'add-images', 'add_images');
 		
 		// Add a second submenu to the custom top-level menu:
+		add_submenu_page('hcg-admin', __('Easy Gallery >> Settings','menu-hcg'), __('Settings','menu-hcg'), 'manage_options', 'settings', 'settings');
+		
+		// Add a second submenu to the custom top-level menu:
 		add_submenu_page('hcg-admin', __('Easy Gallery >> Help (FAQ)','menu-hcg'), __('Help (FAQ)','menu-hcg'), 'manage_options', 'help', 'help');
 		
 		wp_register_style('easy-gallery-style', WP_PLUGIN_URL.'/wp-easy-gallery/css/wp-easy-gallery.css');
@@ -151,6 +175,11 @@
 	function add_images()
 	{
 		include("admin/add-images.php");
+	}
+	
+	function settings()
+	{
+		include("admin/settings.php");
 	}
 	
 	function help()

@@ -452,3 +452,4 @@
 	* html .clearfix {height: 1%;}
 	.clearfix {display: block;}
 	/* End hide from IE-mac */
+	.twitter, .facebook {margin-left: 10px; float: left;}
