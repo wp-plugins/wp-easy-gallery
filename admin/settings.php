@@ -1,0 +1,92 @@
+<?php
+if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
+
+if (isset($_POST['defaultSettings'])) {
+	$temp_defaults = get_option('wp_easy_gallery_defaults');	
+	$temp_defaults['hide_overlay'] = isset($_POST['hide_overlay']) ? $_POST['hide_overlay'] : 'false';
+	
+	update_option('wp_easy_gallery_defaults', $temp_defaults);
+	
+	?>  
+	<div class="updated"><p><strong>Options saved.</strong></p></div>  
+	<?php
+}
+$default_options = get_option('wp_easy_gallery_defaults');
+
+?>
+<div class='wrap wp-easy-gallery'>
+	<h2>Easy Gallery</h2>
+    <p style="width: 50%; float: left;">This is a listing of all galleries.</p>
+    <p style="float: right;"><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><strong><em>Try WP Easy Gallery Pro</em></strong></a></p>
+    <div style="Clear: both;"></div>
+    <form name="save_default_settings" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
+    <table class="widefat post fixed eg-table">
+    	<thead>
+        <tr>
+        	<th>Property or Attribute</th>
+            <th>Value</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+        	<th>Property or Attribute</th>
+            <th>Value</th>
+            <th>Description</th>
+        </tr>
+        </tfoot>
+        <tbody>        			
+            <tr>            	
+            	<td>Hide Gallery Overlay</td>
+                <td><input type="checkbox" name="hide_overlay" id="hide_overlay"<?php echo ($default_options['hide_overlay'] == 'true') ? "checked='checked'" : ""; ?> value="true" /></td>
+                <td>Show or Hide thumbnail gallery overlay in modal window popup. Check to hide the overlay.</td>            
+            </tr>
+            <tr>
+            	<td>                
+                	<input type="hidden" name="defaultSettings" value="true" />
+                    <input type="submit" name="Submit" class="button-primary" value="Save" />                
+                </td>
+                <td></td>
+                <td></td>
+            </tr>			
+        </tbody>
+     </table>
+     <br />
+<div style="float: left; width: 60%; min-width: 488px;">     
+<p><strong>Try WP Easy Gallery Pro</strong><br /><em>Pro Features include: Multi-image uploader, Enhanced admin section for easier navigation, Image preview pop-up, and more...</em></p>
+<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><img title="WP-Easy-Gallery-Pro_468x88" src="http://labs.hahncreativegroup.com/wp-content/uploads/2012/02/WP-Easy-Gallery-Pro_468x88.gif" alt="" width="468" height="88" /></a></p>
+<p><strong>Try Custom Post Donations Pro</strong><br /><em>This WordPress plugin will allow you to create unique customized PayPal donation widgets to insert into your WordPress posts or pages and accept donations. Features include: Multiple Currencies, Multiple PayPal accounts, Custom donation form display titles, and more.</em></p>
+<p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/?src=wpeg"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" alt="Custom Post Donations Pro" /></a></p>
+<p><strong>Try ReFlex Gallery</strong><br /><em>A fully responsive WordPress image gallery plugin that is actually two galleries in one.</em><br />
+<a href="http://wordpress-photo-gallery.com/" target="_blank">ReFlex Gallery</a></p>
+<p><strong>Try Email Obfuscate</strong><br /><em>Email Obfuscate is a Lightweight jQuery plugin that prevents spam-bots from harvesting your email addresses by dynamically obfuscating email addresses on your site.</em><br /><a href="http://codecanyon.net/item/jquery-email-obfuscate-plugin/721738/?ref=HahnCreativeGroup" target="_blank">Email Obfuscate Plugin</a></p>
+<br />
+<p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="PayPal - The safer, easier way to pay online!"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
+</div>
+<div style="float: right; width: 25%; height: 700px; padding: 10px; min-width: 165px;">
+<?php
+$url = "http://labs.hahncreativegroup.com/feed/";
+$rss = simplexml_load_file($url);
+if($rss)
+{
+  echo '<h3>'.$rss->channel->title.'</h3>';
+  $items = $rss->channel->item;
+  $count = 0;
+  foreach($items as $item)
+  {
+	$count++;	
+	$title = $item->title;
+	$link = $item->link;
+	$published_on = $item->pubDate;
+	$description = $item->description;
+	echo '<h4><a href="'.$link.'">'.$title.'</a></h4>';
+	echo '<p>'.$description.'</p>';
+	if ($count >= 5) {
+		break;	
+	}
+  }
+}
+?>
+</div>
+</div>
