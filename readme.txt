@@ -88,7 +88,7 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 
 * WP Easy Gallery requires PHP 5 to work properly, please check your web hosting configurations.
 
-Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>, <a href='http://www.wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery Plugin'>WordPress Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/reflex-gallery/' title='Responsive Photo Gallery'>Responsive Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/galeria-de-imagenes-wordpress/' title='Galeria de Imagenes WordPress'>Galeria de Imagenes WordPress</a>
+Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>, <a href='http://www.wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery Plugin'>WordPress Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/reflex-gallery/' title='Responsive Photo Gallery'>Responsive Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/galeria-de-imagenes-wordpress/' title='Galeria de Imagenes WordPress'>Galeria de Imagenes WordPress</a>, <a href='http://labs.hahncreativegroup.com/2012/12/french-translation-added-for-wp-easy-gallery-pro/' title='Galerie d'images pour WordPress'>Galerie d'images pour WordPress</a>
 
 == Changelog ==
 
