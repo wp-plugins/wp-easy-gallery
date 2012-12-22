@@ -24,7 +24,7 @@ Features include:
 
 For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>WP Easy Gallery</a>
 
-Also try <a href='http://wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery</a> - ReFlex Gallery is a fully responsive WordPress image gallery plugin that is actually two galleries in one.
+Also try <a href='http://wordpress.org/extend/plugins/reflex-gallery/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery</a> or <a href='http://wordpress-photo-gallery.com/#gallery' title='Responsive WordPress Photo Gallery'>ReFlex Gallery Pro</a> - ReFlex Gallery is a fully responsive WordPress image gallery plugin that is actually two galleries in one.
 
 <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='image gallery'>WP Easy Gallery Pro Plugin</a>
 
@@ -44,7 +44,7 @@ Pro features include:
 
 <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress gallery plugin'>Upgrade to WP Easy Gallery Pro</a>
 
-Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WP Easy Gallery Pro</a>, <a href='http://wordpress.org/extend/plugins/reflex-gallery/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery</a>, <a href='http://wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery Pro</a>, <a href='http://labs.hahncreativegroup.com/paypal-for-wordpress/' title='PayPal for WordPress'>Custom Post Donations Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, <a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a>, <a href="http://codecanyon.net/item/jquery-email-obfuscate-plugin/721738/?ref=HahnCreativeGroup">Email Obfuscate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
+Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WP Easy Gallery Pro</a>, <a href='http://wordpress.org/extend/plugins/reflex-gallery/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery</a>, <a href='http://wordpress-photo-gallery.com/#gallery' title='Responsive WordPress Photo Gallery'>ReFlex Gallery Pro</a>, <a href='http://labs.hahncreativegroup.com/paypal-for-wordpress/' title='PayPal for WordPress'>Custom Post Donations Pro</a>, <a href='http://labs.hahncreativegroup.com/wp-translate-pro/'>WP Translate Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, <a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a>, <a href="http://codecanyon.net/item/jquery-email-obfuscate-plugin/721738/?ref=HahnCreativeGroup">Email Obfuscate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
 
 ### License Notice
 
