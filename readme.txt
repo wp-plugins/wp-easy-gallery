@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image, images, media, photo, photo albums, photos, picture, pictures, Post, posts, plugin, slideshow, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 2.6
 Tested up to: 3.5
-Stable tag: 2.6
+Stable tag: 2.7
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
@@ -92,7 +92,11 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 == Changelog ==
 
-**Dec. 8, 2012 - 2.6**
+**Jan. 13, 2013 - v2.7**
+
+** Added the fability to hide the social sharing icons / links in the gallery pop-up
+
+**Dec. 8, 2012 - v2.6**
 
 * Style update to fix social sharing button layout issue
 * Addition of settings page and functionality to hide thumbnail overlay from settings

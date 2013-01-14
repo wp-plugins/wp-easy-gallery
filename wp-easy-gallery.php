@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 2.6
+	Version: 2.7
 	Author URI: http://labs.hahncreativegroup.com/
 	*/	
 	
@@ -87,8 +87,8 @@
 		$wpEasyGalleryOptions = get_option('wp_easy_gallery_defaults');
 		wp_enqueue_script('jquery');
 		wp_register_script('prettyPhoto', WP_PLUGIN_URL.'/wp-easy-gallery/js/jquery.prettyPhoto.js', array('jquery'));
-		if ($wpEasyGalleryOptions['hide_overlay'] == 'true') {
-			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader_hideOverlay.js', array('prettyPhoto', 'jquery'));
+		if ($wpEasyGalleryOptions['hide_social'] == 'true') {
+			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader_hideSocial.js', array('prettyPhoto', 'jquery'));
 		}
 		else {
 			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader.js', array('prettyPhoto', 'jquery'));
