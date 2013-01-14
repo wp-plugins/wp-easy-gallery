@@ -94,7 +94,7 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 **Jan. 13, 2013 - v2.7**
 
-** Added the fability to hide the social sharing icons / links in the gallery pop-up
+* Added the fability to hide the social sharing icons / links in the gallery pop-up
 
 **Dec. 8, 2012 - v2.6**
 
