@@ -2,14 +2,16 @@
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
 
 if (isset($_POST['defaultSettings'])) {
-	$temp_defaults = get_option('wp_easy_gallery_defaults');	
-	$temp_defaults['hide_overlay'] = isset($_POST['hide_overlay']) ? $_POST['hide_overlay'] : 'false';
-	
-	update_option('wp_easy_gallery_defaults', $temp_defaults);
-	
-	?>  
-	<div class="updated"><p><strong>Options saved.</strong></p></div>  
-	<?php
+	if(check_admin_referer('wpeg_settings','wpeg_settings')) {
+	  $temp_defaults = get_option('wp_easy_gallery_defaults');	
+	  $temp_defaults['hide_overlay'] = isset($_POST['hide_overlay']) ? $_POST['hide_overlay'] : 'false';
+	  
+	  update_option('wp_easy_gallery_defaults', $temp_defaults);
+	  
+	  ?>  
+	  <div class="updated"><p><strong>Options saved.</strong></p></div>  
+	  <?php
+	}
 }
 $default_options = get_option('wp_easy_gallery_defaults');
 
@@ -20,6 +22,7 @@ $default_options = get_option('wp_easy_gallery_defaults');
     <p style="float: right;"><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><strong><em>Try WP Easy Gallery Pro</em></strong></a></p>
     <div style="Clear: both;"></div>
     <form name="save_default_settings" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
+    <?php wp_nonce_field('wpeg_settings','wpeg_settings'); ?>
     <table class="widefat post fixed eg-table">
     	<thead>
         <tr>
@@ -38,7 +41,7 @@ $default_options = get_option('wp_easy_gallery_defaults');
         <tbody>        			
             <tr>            	
             	<td>Hide Gallery Overlay</td>
-                <td><input type="checkbox" name="hide_overlay" id="hide_overlay"<?php echo ($default_options['hide_overlay'] == 'true') ? "checked='checked'" : ""; ?> value="true" /></td>
+                <td><input type="checkbox" name="hide_overlay" id="hide_overlay"<?php _e(($default_options['hide_overlay'] == 'true') ? "checked='checked'" : ""); ?> value="true" /></td>
                 <td>Show or Hide thumbnail gallery overlay in modal window popup. Check to hide the overlay.</td>            
             </tr>
             <tr>

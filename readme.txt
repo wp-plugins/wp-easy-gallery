@@ -92,6 +92,10 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 == Changelog ==
 
+**Feb. 17, 2013 - v2.7.1**
+
+* Critical security patches
+
 **Jan. 13, 2013 - v2.7**
 
 * Added the fability to hide the social sharing icons / links in the gallery pop-up

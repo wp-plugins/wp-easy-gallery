@@ -9,47 +9,53 @@ $galleryResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_table" );
 
 //Select gallery
 if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) {
-	$gid = (isset($_POST['select_gallery'])) ? mysql_real_escape_string($_POST['select_gallery']) : mysql_real_escape_string($_POST['galleryId']);
-	$imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gid ORDER BY sortOrder ASC" );
-	$gallery = $wpdb->get_row( "SELECT * FROM $easy_gallery_table WHERE Id = $gid" );
+	if(check_admin_referer('wpeg_select_gallery','wpeg_select_gallery')) {
+	  $gid = intval((isset($_POST['select_gallery'])) ? mysql_real_escape_string($_POST['select_gallery']) : mysql_real_escape_string($_POST['galleryId']));
+	  $imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gid ORDER BY sortOrder ASC" );
+	  $gallery = $wpdb->get_row( "SELECT * FROM $easy_gallery_table WHERE Id = $gid" );
+	}
 }
 	
 if(isset($_POST['hcg_edit_gallery']))
 {
-	if($_POST['galleryName'] != "") {
-	  $galleryName = $_POST['galleryName'];
-	  $galleryDescription = $_POST['galleryDescription'];	  
-	  $slug = strtolower(str_replace(" ", "", $_POST['galleryName']));
-	  $imagepath = str_replace("\\", "", $_POST['upload_image']);
-	  $thumbwidth = $_POST['gallerythumbwidth'];
-	  $thumbheight = $_POST['gallerythumbheight'];
-	  
-	  if(isset($_POST['hcg_edit_gallery'])) {
-		  $imageEdited = $wpdb->update( $easy_gallery_table, array( 'name' => $galleryName, 'slug' => $slug, 'description' => $galleryDescription, 'thumbnail' => $imagepath, 'thumbwidth' => $thumbwidth, 'thumbheight' => $thumbheight ), array( 'Id' => $_POST['hcg_edit_gallery'] ) );
-			  
-			  ?>  
-			  <div class="updated"><p><strong><?php _e('Gallery has been edited.' ); ?></strong></p></div>  
-			  <?php
+	if(check_admin_referer('wpeg_edit_gallery','wpeg_edit_gallery')) {
+	  if($_POST['galleryName'] != "") {
+		$galleryName = $_POST['galleryName'];
+		$galleryDescription = $_POST['galleryDescription'];	  
+		$slug = strtolower(str_replace(" ", "", $_POST['galleryName']));
+		$imagepath = str_replace("\\", "", $_POST['upload_image']);
+		$thumbwidth = $_POST['gallerythumbwidth'];
+		$thumbheight = $_POST['gallerythumbheight'];
+		
+		if(isset($_POST['hcg_edit_gallery'])) {
+			$imageEdited = $wpdb->update( $easy_gallery_table, array( 'name' => $galleryName, 'slug' => $slug, 'description' => $galleryDescription, 'thumbnail' => $imagepath, 'thumbwidth' => $thumbwidth, 'thumbheight' => $thumbheight ), array( 'Id' => intval($_POST['hcg_edit_gallery']) ) );
+				
+				?>  
+				<div class="updated"><p><strong><?php _e('Gallery has been edited.' ); ?></strong></p></div>  
+				<?php
+		}
 	  }
-	}}
+	}
+}
 ?>
 <div class='wrap wp-easy-gallery'>
 	<h2>Easy Gallery - Edit Galleries</h2>
     <?php if(!isset($_POST['select_gallery']) && !isset($_POST['galleryId'])) { ?>
     <p>Select a galley</p>		
     <form name="gallery" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
-    	<select name="select_gallery" onchange="gallery.submit()">
+    	<?php wp_nonce_field('wpeg_select_gallery','wpeg_select_gallery'); ?>
+        <select name="select_gallery" onchange="gallery.submit()">
         	<option> - SELECT A GALLERY - </option>
 			<?php
 				foreach($galleryResults as $gallery) {
-					?><option value="<?php echo $gallery->Id; ?>"><?php echo $gallery->name; ?></option>
+					?><option value="<?php _e($gallery->Id); ?>"><?php _e($gallery->name); ?></option>
                 <?php
 				}
 			?>
         </select>
     </form>
     <?php } else if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) { ?>    
-    <h3>Gallery: <?php echo $gallery->name; ?></h3>
+    <h3>Gallery: <?php _e($gallery->name); ?></h3>
     
     <form name="switch_gallery" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
     <input type="hidden" name="switch" value="true" />
@@ -60,7 +66,8 @@ if(isset($_POST['hcg_edit_gallery']))
     <p style="float: right;"><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><strong><em>Try WP Easy Gallery Pro</em></strong></a></p>
     <div style="Clear: both;"></div>
     <form name="hcg_add_gallery_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
-    <input type="hidden" name="hcg_edit_gallery" value="<?php echo $gid; ?>" />
+    <input type="hidden" name="hcg_edit_gallery" value="<?php _e($gid); ?>" />
+    <?php wp_nonce_field('wpeg_edit_gallery', 'wpeg_edit_gallery'); ?>
     <table class="widefat post fixed eg-table">
     	<thead>
         <tr>
@@ -79,28 +86,28 @@ if(isset($_POST['hcg_edit_gallery']))
         <tbody>
         	<tr>
             	<td><strong>Enter Gallery Name:</strong></td>
-                <td><input type="text" size="30" name="galleryName" value="<?php echo $gallery->name; ?>" /></td>
+                <td><input type="text" size="30" name="galleryName" value="<?php _e($gallery->name); ?>" /></td>
                 <td>This name is the internal name for the gallery.<br />Please avoid non-letter characters such as ', ", *, etc.</td>
             </tr>
             <tr>
             	<td><strong>Enter Gallery Description:</strong></td>
-                <td><input type="text" size="50" name="galleryDescription" value="<?php echo $gallery->description; ?>" /></td>
+                <td><input type="text" size="50" name="galleryDescription" value="<?php _e($gallery->description) ?>" /></td>
                 <td>This description is for internal use.</td>
             </tr>
             <tr>
             	<td><strong>Enter Thumbnail Imagepath:</strong></td>
-                <td><input id="upload_image" type="text" size="36" name="upload_image" value="<?php echo $gallery->thumbnail; ?>" />
+                <td><input id="upload_image" type="text" size="36" name="upload_image" value="<?php _e($gallery->thumbnail); ?>" />
 					<input id="upload_image_button" type="button" value="Upload Image" /></td>
                 <td>This is the file path for the gallery thumbnail image.</td>
             </tr>
             <tr>
             	<td><strong>Enter Thumbnail Width:</strong></td>
-                <td><input type="text" size="10" name="gallerythumbwidth" value="<?php echo $gallery->thumbwidth; ?>" /></td>
+                <td><input type="text" size="10" name="gallerythumbwidth" value="<?php _e($gallery->thumbwidth); ?>" /></td>
                 <td>This is the width of the gallery thumbnail image.</td>
             </tr>
             <tr>
             	<td><strong>Enter Thumbnail Height:</strong></td>
-                <td><input type="text" size="10" name="gallerythumbheight" value="<?php echo $gallery->thumbheight; ?>" /></td>
+                <td><input type="text" size="10" name="gallerythumbheight" value="<?php _e($gallery->thumbheight); ?>" /></td>
                 <td>This is the height of the gallery thumbnail image.</td>
             </tr>
             <tr>
