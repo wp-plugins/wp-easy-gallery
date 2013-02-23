@@ -11,7 +11,7 @@ $galleryResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_table" );
 
 //Select gallery
 if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) {
-	if(check_admin_referer('wpeg_select_gallery','wpeg_select_gallery')) {
+	if(check_admin_referer('wpeg_gallery','wpeg_gallery')) {
 	  $gid = intval((isset($_POST['select_gallery'])) ? mysql_real_escape_string($_POST['select_gallery']) : mysql_real_escape_string($_POST['galleryId']));
 	  $imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gid ORDER BY sortOrder ASC" );
 	  $gallery = $wpdb->get_row( "SELECT * FROM $easy_gallery_table WHERE Id = $gid" );
@@ -20,7 +20,7 @@ if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) {
 
 //Add image
 if(isset($_POST['galleryId']) && !isset($_POST['switch'])) {
-	if(check_admin_referer('wpeg_insert_image','wpeg_insert_image')) {
+	if(check_admin_referer('wpeg_gallery','wpeg_gallery')) {
 	  $gid = intval($_POST['galleryId']);
 	  $imagePath = $_POST['upload_image'];
 	  $imageTitle = $_POST['image_title'];
@@ -67,7 +67,7 @@ if(isset($_POST['delete_image'])) {
 	<?php if(!isset($_POST['select_gallery']) && !isset($_POST['galleryId'])) { ?>
     <p>Select a galley</p>		
     <form name="gallery" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
-    	<?php wp_nonce_field('wpeg_select_gallery','wpeg_select_gallery'); ?>
+    	<?php wp_nonce_field('wpeg_gallery','wpeg_gallery'); ?>
         <select name="select_gallery" onchange="gallery.submit()">
         	<option> - SELECT A GALLERY - </option>
 			<?php
@@ -89,7 +89,7 @@ if(isset($_POST['delete_image'])) {
     
     <form name="add_image_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
     <input type="hidden" name="galleryId" value="<?php _e($gallery->Id); ?>" />
-    <?php wp_nonce_field('wpeg_insert_image','wpeg_insert_image'); ?>
+    <?php wp_nonce_field('wpeg_gallery','wpeg_gallery'); ?>
     <table class="widefat post fixed eg-table">
     	<thead>
         <tr>
