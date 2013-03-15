@@ -130,3 +130,9 @@ div.dark_rounded .pp_loaderIcon,div.dark_square .pp_loaderIcon{background:url(..
 .pp_top .pp_right,.pp_bottom .pp_right{height:20px;left:auto;position:absolute;right:0;top:0;width:20px}
 .pp_fade,.pp_gallery li.default a img{display:none}
 .twitter, .facebook {margin-left: 10px; float: left;}
+
+/* Added 3-13-2013 */
+.pp_gallery div{overflow:hidden;float:left;}
+a.pp_arrow_next{display:inline;float:right;height:15px;margin-top:3px;overflow:hidden;text-indent:-10000px;width:14px}
+a.pp_arrow_previous{display:inline;float:left;height:15px;margin-top:3px;overflow:hidden;text-indent:-10000px;width:14px}
+.pp_gallery{left:50%;margin-top:-50px;position:absolute;z-index:10000}
