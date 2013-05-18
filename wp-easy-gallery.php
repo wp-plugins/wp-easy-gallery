@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 2.7.4
+	Version: 2.7.5
 	Author URI: http://labs.hahncreativegroup.com/
 	*/	
 	
@@ -86,11 +86,17 @@
 	function attach_EasyGallery_scripts() {
 		$wpEasyGalleryOptions = get_option('wp_easy_gallery_defaults');
 		wp_enqueue_script('jquery');
-		wp_register_script('jquery_migrate', 'http://code.jquery.com/jquery-migrate-1.1.1.js', array('jquery'));
+		wp_register_script('jquery_migrate', WP_PLUGIN_URL.'/js/jquery-migrate-1.1.1.js', array('jquery'));
 		wp_enqueue_script('jquery_migrate');
 		wp_register_script('prettyPhoto', WP_PLUGIN_URL.'/wp-easy-gallery/js/jquery.prettyPhoto.js', array('jquery'));
-		if ($wpEasyGalleryOptions['hide_social'] == 'true') {
+		if ($wpEasyGalleryOptions['hide_social'] == 'true' && $wpEasyGalleryOptions['hide_overlay'] == 'false') {
 			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader_hideSocial.js', array('prettyPhoto', 'jquery'));
+		}
+		else if ($wpEasyGalleryOptions['hide_social'] == 'false' && $wpEasyGalleryOptions['hide_overlay'] == 'true') {
+			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader_hideOverlay.js', array('prettyPhoto', 'jquery'));
+		}
+		else if ($wpEasyGalleryOptions['hide_social'] == 'true' && $wpEasyGalleryOptions['hide_overlay'] == 'true') {
+			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader_hideOverlaySocial.js', array('prettyPhoto', 'jquery'));
 		}
 		else {
 			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader.js', array('prettyPhoto', 'jquery'));

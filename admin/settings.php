@@ -5,6 +5,7 @@ if (isset($_POST['defaultSettings'])) {
 	if(check_admin_referer('wpeg_settings','wpeg_settings')) {
 	  $temp_defaults = get_option('wp_easy_gallery_defaults');	
 	  $temp_defaults['hide_overlay'] = isset($_POST['hide_overlay']) ? $_POST['hide_overlay'] : 'false';
+	  $temp_defaults['hide_social'] = isset($_POST['hide_social']) ? $_POST['hide_social'] : 'false';
 	  
 	  update_option('wp_easy_gallery_defaults', $temp_defaults);
 	  
@@ -43,6 +44,11 @@ $default_options = get_option('wp_easy_gallery_defaults');
             	<td>Hide Gallery Overlay</td>
                 <td><input type="checkbox" name="hide_overlay" id="hide_overlay"<?php _e(($default_options['hide_overlay'] == 'true') ? "checked='checked'" : ""); ?> value="true" /></td>
                 <td>Show or Hide thumbnail gallery overlay in modal window popup. Check to hide the overlay.</td>            
+            </tr>
+            <tr>            	
+            	<td>Hide Gallery Social Buttons</td>
+                <td><input type="checkbox" name="hide_social" id="hide_social"<?php _e(($default_options['hide_social'] == 'true') ? "checked='checked'" : ""); ?> value="true" /></td>
+                <td>Show or Hide the social sharing buttons in modal window popup. Check to hide the social sharing buttons.</td>            
             </tr>
             <tr>
             	<td>                
