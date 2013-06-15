@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image, images, media, photo, photo albums, photos, picture, pictures, Post, posts, plugin, slideshow, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 2.6
 Tested up to: 3.5.1
-Stable tag: 2.7.6
+Stable tag: 2.8
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
@@ -91,6 +91,10 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>, <a href='http://www.wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery Plugin'>WordPress Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/reflex-gallery/' title='Responsive Photo Gallery'>Responsive Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/galeria-de-imagenes-wordpress/' title='Galeria de Imagenes WordPress'>Galeria de Imagenes WordPress</a>, <a href='http://labs.hahncreativegroup.com/2012/12/french-translation-added-for-wp-easy-gallery-pro/' title='Galerie d'images pour WordPress'>Galerie d'images pour WordPress</a>
 
 == Changelog ==
+
+**June 15, 2013 - v2.8**
+
+* Updated prettyPhoto JS script to version 3.1.5
 
 **May 22, 2013 - v2.7.6**
 
