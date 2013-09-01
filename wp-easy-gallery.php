@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 2.8
+	Version: 3.0
 	Author URI: http://labs.hahncreativegroup.com/
 	*/	
 	
@@ -75,13 +75,39 @@
 					'thumbnail_width'  => 'auto',
 					'thunbnail_height' => 'auto',
 					'hide_overlay'	   => 'false',
-					'hide_social'	   => 'false'
+					'hide_social'	   => 'false',
+					'custom_style'	   => ''
 				);
 				
 				add_option('wp_easy_gallery_defaults', $gallery_options);
 			}
+			else {
+				$wpEasyGalleryOptions	= get_option('wp_easy_gallery_defaults');
+				$keys = array_keys($wpEasyGalleryOptions);
+				
+				if (!in_array('version', $keys)) {
+					$wpEasyGalleryOptions['version'] = $this->plugin_version;	
+				}				
+				if (!in_array('hide_overlay', $keys)) {
+					$wpEasyGalleryOptions['hide_overlay'] = "false";	
+				}
+				if (!in_array('hide_social', $keys)) {
+					$wpEasyGalleryOptions['hide_social'] = "false";	
+				}
+				if (!in_array('custom_style', $keys)) {
+					$wpEasyGalleryOptions['custom_style'] = "";	
+				}
+				
+				update_option('wp_easy_gallery_defaults', $wpEasyGalleryOptions);	
+			}
 	 }
 	 add_action('init', 'define_options');
+	 
+	 function wp_custom_style() {
+		$styles = get_option('wp_easy_gallery_defaults');
+		echo "<style>.wp-easy-gallery img {".$styles['custom_style']."}</style>";
+	}
+	add_action('wp_head', 'wp_custom_style');
 		
 	function attach_EasyGallery_scripts() {
 		$wpEasyGalleryOptions = get_option('wp_easy_gallery_defaults');

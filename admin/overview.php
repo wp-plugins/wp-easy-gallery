@@ -20,7 +20,7 @@ if (isset($_POST['defaultSettings'])) {
 	if(check_admin_referer('wpeg_settings','wpeg_settings')) {
 	  $temp_defaults = get_option('wp_easy_gallery_defaults');
 	  $temp_defaults['hide_social'] = isset($_POST['hide_social']) ? $_POST['hide_social'] : 'false';
-	  
+	  	  
 	  update_option('wp_easy_gallery_defaults', $temp_defaults);
 	  
 	  ?>  
@@ -71,40 +71,8 @@ $default_options = get_option('wp_easy_gallery_defaults');
      </table>
      <br />
      <h3><?php _e('Default Options', 'wp-easy-gallery'); ?></h3>
-     <form name="save_default_settings" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
-     <table class="widefat post fixed wp-easy-gallery-table">
-     	<thead>
-        	<tr>
-              <th><?php _e('Property', 'wp-easy-gallery'); ?></th>
-              <th><?php _e('Default Value', 'wp-easy-gallery'); ?></th>
-              <th><?php _e('Description', 'wp-easy-gallery'); ?></th>
-            </tr>
-        </thead>
-        <tfoot>
-        	<tr>
-              <th><?php _e('Property', 'wp-easy-gallery'); ?></th>
-              <th><?php _e('Default Value', 'wp-easy-gallery'); ?></th>
-              <th><?php _e('Description', 'wp-easy-gallery'); ?></th>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-            	<td><?php _e('Hide Social Sharing', 'wp-easy-gallery'); ?></td>
-                <td><input type="checkbox" name="hide_social" id="hide_social"<?php echo ($default_options['hide_social'] == 'true') ? "checked='checked'" : ""; ?> value="true" /></td>
-                <td><?php _e('Show or Hide social sharing buttons in modal window popup. Check to hide Twitter and Facebook buttons.', 'wp-easy-gallery'); ?></td>
-            </tr>
-            <tr>
-            	<td>                
-                	<input type="hidden" name="defaultSettings" value="true" />
-                    <?php wp_nonce_field('wpeg_settings','wpeg_settings'); ?>
-                    <input type="submit" name="Submit" class="button-primary" value="<?php _e('Save', 'wp-easy-gallery'); ?>" />                
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-     </table>
-     </form>
+     <p>Go to: <a href="?page=settings">Settings</a> page.</p>
+     <hr />     
      <br />
 <div style="float: left; width: 60%; min-width: 488px;">     
 <p><strong>Try WP Easy Gallery Pro</strong><br /><em>Pro Features include: Multi-image uploader, Enhanced admin section for easier navigation, Image preview pop-up, and more...</em></p>
