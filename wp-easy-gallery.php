@@ -263,6 +263,5 @@
 	function EasyGallery_Handler($atts) {
 	  return createEasyGallery($atts['id']);
   }
-  add_shortcode('EasyGallery', 'EasyGallery_Handler');
-	
+  add_shortcode('EasyGallery', 'EasyGallery_Handler');	
 ?>

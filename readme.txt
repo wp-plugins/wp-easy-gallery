@@ -37,10 +37,10 @@ Pro features include:
 - Galleries use 1st image in gallery for thumbnail by default
 - Set global thumbnail dimensions for all galleries - can be overwritten for each gallery
 - Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
-- German language support (Sprachunterstutzung fur Deutsch) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro Version</a>)
-- Spanish Translation Added (Traducci&oacute;n al espa&ntilde;ol a&ntilde;adi&oacute;) (<a href='http://labs.hahncreativegroup.com/galeria-de-imagenes-wordpress/' title='WordPress Image Gallery Plugin'>Pro Version</a>)
-- Portuguese Translation Added (Tradu&ccedil;&atilde;o Portugu&ecirc;s Adicionado) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro Version</a>)
-- French Translation Added (Traduction fran&ccedil;aise ajout&eacute;) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro Version</a>)
+- German language support (Sprachunterstutzung fur Deutsch) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
+- Spanish Translation Added (Traducci&oacute;n al espa&ntilde;ol a&ntilde;adi&oacute;) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
+- Portuguese Translation Added (Tradu&ccedil;&atilde;o Portugu&ecirc;s Adicionado) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
+- French Translation Added (Traduction fran&ccedil;aise ajout&eacute;) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
 
 <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress gallery plugin'>Upgrade to WP Easy Gallery Pro</a> or <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>WP Easy Gallery Premium</a> for unlimited upgrades
 
