@@ -24,6 +24,12 @@ $galleryAdded = false;
 			global $wpdb;
 			global $easy_gallery_table;
 			
+			$gallery = $wpdb->get_row( "SELECT * FROM $easy_gallery_table WHERE slug = '".$slug."'" );
+			
+			if (count($gallery) > 0) {
+				$slug = $slug."-".count($gallery);	
+			}
+			
 			$galleryAdded = $wpdb->insert( $easy_gallery_table, array( 'name' => $galleryName, 'slug' => $slug, 'description' => $galleryDescription, 'thumbnail' => $imagepath, 'thumbwidth' => $thumbwidth, 'thumbheight' => $thumbheight ) );
 			
 			if($galleryAdded) {
