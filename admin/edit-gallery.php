@@ -22,7 +22,7 @@ if(isset($_POST['hcg_edit_gallery']))
 	  if($_POST['galleryName'] != "") {
 		$galleryName = $_POST['galleryName'];
 		$galleryDescription = $_POST['galleryDescription'];	  
-		$slug = strtolower(str_replace(" ", "", $_POST['galleryName']));
+		$slug = mb_convert_case(str_replace(" ", "", $_POST['galleryName']), MB_CASE_LOWER, "UTF-8");
 		$imagepath = str_replace("\\", "", $_POST['upload_image']);
 		$thumbwidth = $_POST['gallerythumbwidth'];
 		$thumbheight = $_POST['gallerythumbheight'];
@@ -37,10 +37,17 @@ if(isset($_POST['hcg_edit_gallery']))
 	  }
 	}
 }
+if(isset($_POST['hcg_edit_gallery'])) {
+	if(check_admin_referer('wpeg_edit_gallery','wpeg_edit_gallery')) {
+	  $gid = intval($_POST['hcg_edit_gallery']);
+	  $imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gid ORDER BY sortOrder ASC" );
+	  $gallery = $wpdb->get_row( "SELECT * FROM $easy_gallery_table WHERE Id = $gid" );
+	}
+}
 ?>
 <div class='wrap wp-easy-gallery'>
 	<h2>Easy Gallery - Edit Galleries</h2>
-    <?php if(!isset($_POST['select_gallery']) && !isset($_POST['galleryId'])) { ?>
+    <?php if(!isset($_POST['select_gallery']) && !isset($_POST['galleryId']) && !isset($_POST['hcg_edit_gallery'])) { ?>
     <p>Select a galley</p>		
     <form name="gallery" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
     	<?php wp_nonce_field('wpeg_select_gallery','wpeg_select_gallery'); ?>
@@ -54,7 +61,7 @@ if(isset($_POST['hcg_edit_gallery']))
 			?>
         </select>
     </form>
-    <?php } else if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) { ?>    
+    <?php } else if(isset($_POST['select_gallery']) || isset($_POST['galleryId']) || isset($_POST['hcg_edit_gallery'])) { ?>    
     <h3>Gallery: <?php _e($gallery->name); ?></h3>
     
     <form name="switch_gallery" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
@@ -122,7 +129,7 @@ if(isset($_POST['hcg_edit_gallery']))
     <br />  
 <p><strong>Try WP Easy Gallery Pro</strong><br /><em>Pro Features include: Multi-image uploader, Enhanced admin section for easier navigation, Image preview pop-up, and more...</em></p>
 <p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><img title="WP-Easy-Gallery-Pro_468x88" src="http://labs.hahncreativegroup.com/wp-content/uploads/2012/02/WP-Easy-Gallery-Pro_468x88.gif" alt="" width="468" height="88" /></a></p>
-<p><strong>Try WP Easy Gallery Premium</strong><br /><em>Premuim Features all of the Pro features plus unlimited upgrades.</em><br />
+<p><strong>Try WP Easy Gallery Premium</strong><br /><em>Premium Features all of the Pro features plus unlimited upgrades.</em><br />
 <a href="http://wordpress-photo-gallery.com/" target="_blank">WP Easy Gallery Premium</a></p>
 <p><strong>Try Custom Post Donations Pro</strong><br /><em>This WordPress plugin will allow you to create unique customized PayPal donation widgets to insert into your WordPress posts or pages and accept donations. Features include: Multiple Currencies, Multiple PayPal accounts, Custom donation form display titles, and more.</em></p>
 <p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/?src=wpeg"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" alt="Custom Post Donations Pro" /></a></p>

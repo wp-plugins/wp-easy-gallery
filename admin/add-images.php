@@ -37,25 +37,37 @@ if(isset($_POST['galleryId']) && !isset($_POST['switch'])) {
 	}
 }
 
-//Edit image
-if(isset($_POST['edit_image'])) {
-	if(check_admin_referer('wpeg_edit_image','wpeg_edit_image')) {
-		$imageEdited = $wpdb->update( $easy_gallery_image_table, array( 'imagePath' => $_POST['edit_imagePath'], 'title' => $_POST['edit_imageTitle'], 'description' => $_POST['edit_imageDescription'], 'sortOrder' => $_POST['edit_imageSort'] ), array( 'Id' => intval($_POST['edit_image']) ) );
-			
-			?>  
-			<div class="updated"><p><strong><?php _e('Image has been edited.' ); ?></strong></p></div>  
-			<?php
+//Edit/Delete Images
+if(isset($_POST['editing_images'])) {
+	if(check_admin_referer('wpeg_gallery','wpeg_gallery')) {	
+		$editImageIds = $_POST['edit_imageId'];
+		$imagePaths = $_POST['edit_imagePath'];
+		$imageTitles = $_POST['edit_imageTitle'];
+		$imageDescriptions = $_POST['edit_imageDescription'];
+		$sortOrders = $_POST['edit_imageSort'];
+		$imagesToDelete = isset($_POST['edit_imageDelete']) ? $_POST['edit_imageDelete'] : array();
+	
+		$i = 0;
+		foreach($editImageIds as $editImageId) {
+			if(in_array($editImageId, $imagesToDelete)) {
+				$wpdb->query( "DELETE FROM $easy_gallery_image_table WHERE Id = '".$editImageId."'" );
+				echo "Deleted: ".$imageTitles[$i];
+			}
+			else {
+				$imageEdited = $wpdb->update( $easy_gallery_image_table, array( 'imagePath' => $imagePaths[$i], 'title' => $imageTitles[$i], 'description' => $imageDescriptions[$i], 'sortOrder' => $sortOrders[$i] ), array( 'Id' => $editImageId ) );
+			}		
+			$i++;
+		}		  
+	  ?>  
+	  <div class="updated"><p><strong><?php _e('Images have been edited.' ); ?></strong></p></div>  
+	  <?php		
 	}
 }
-
-// Delete image
-if(isset($_POST['delete_image'])) {
-	if(check_admin_referer('wpeg_delete_image','wpeg_delete_image')) {
-		$wpdb->query( "DELETE FROM $easy_gallery_image_table WHERE Id = '".$_POST['delete_image']."'" );
-		
-		?>  
-        <div class="updated"><p><strong><?php _e('Image has been deleted.' ); ?></strong></p></div>  
-        <?php
+if(isset($_POST['editing_gid'])) {
+	if(check_admin_referer('wpeg_gallery','wpeg_gallery')) {
+	  $gid = intval($_POST['editing_gid']);
+	  $imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gid ORDER BY sortOrder ASC" );
+	  $gallery = $wpdb->get_row( "SELECT * FROM $easy_gallery_table WHERE Id = $gid" );
 	}
 }
 
@@ -64,7 +76,7 @@ if(isset($_POST['delete_image'])) {
 <div class='wrap wp-easy-gallery'>
 	<h2>Easy Gallery</h2>    
     <p>Add new images to gallery</p>
-	<?php if(!isset($_POST['select_gallery']) && !isset($_POST['galleryId'])) { ?>
+	<?php if(!isset($_POST['select_gallery']) && !isset($_POST['galleryId']) && !isset($_POST['editing_images'])) { ?>
     <p>Select a galley</p>		
     <form name="gallery" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
     	<?php wp_nonce_field('wpeg_gallery','wpeg_gallery'); ?>
@@ -78,7 +90,7 @@ if(isset($_POST['delete_image'])) {
 			?>
         </select>
     </form>
-    <?php } else if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) { ?>    
+    <?php } else if(isset($_POST['select_gallery']) || isset($_POST['galleryId']) || isset($_POST['editing_images'])) { ?>    
     <h3>Gallery: <?php _e($gallery->name); ?></h3>
     <form name="switch_gallery" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
     <input type="hidden" name="switch" value="true" />
@@ -135,45 +147,37 @@ if(isset($_POST['delete_image'])) {
             <th class="eg-cell-spacer-700">Image Info</th>
             <th></th>            
         </tr>
-        </thead>
-        <tfoot>
-        <tr>
-        	<th>Image Preview</th>
-            <th>Image Info</th>
-            <th></th>            
-        </tr>
-        </tfoot>
-        <tbody>        	
+        </thead>        
+        <tbody>
+<form name="edit_image_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">	
+<input type="hidden" name="editing_gid" value="<?php _e($gallery->Id); ?>" />
+<input type="hidden" name="editing_images" value="true" />
+<?php wp_nonce_field('wpeg_gallery', 'wpeg_gallery'); ?>	
         	<?php foreach($imageResults as $image) { ?>				
             <tr>
-            	<td><img src="<?php _e($image->imagePath); ?>" width="75" alt="" /></td>
-                <td>
-                	<form name="edit_image_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
-                	<input type="hidden" name="edit_image" value="<?php _e($image->Id); ?>" />
-                    <?php wp_nonce_field('wpeg_edit_image', 'wpeg_edit_image'); ?>                    
-                	<p><strong>Image Path:</strong> <input type="text" name="edit_imagePath" size="75" value="<?php _e($image->imagePath); ?>" /></p>
-                    <p><strong>Image Title:</strong> <input type="text" name="edit_imageTitle" size="20" value="<?php _e($image->title); ?>" /></p>
-                    <p><strong>Image Description:</strong> <input type="text" name="edit_imageDescription" size="75" value="<?php _e($image->description); ?>" /></p>
-                    <p><strong>Sort Order:</strong> <input type="text" name="edit_imageSort" size="10" value="<?php _e($image->sortOrder); ?>" /></p>
-                    <div style="clear:both;"></div>
-                    <p class="major-publishing-actions left-float eg-right-margin"><input type="submit" name="Submit" class="button-primary" value="Save Image" /></p>
-                    </form>                    
-                    <form name="delete_image_form" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>" method="post">
-                    <input type="hidden" name="delete_image" value="<?php _e($image->Id); ?>" />
-                    <?php wp_nonce_field('wpeg_delete_image', 'wpeg_delete_image'); ?>
-                    <p class="major-publishing-actions left-float"><input type="submit" name="Submit" class="button-primary" value="Delete Image" /></p>
-                    </form>
+            	<td><a onclick="var images=['<?php _e($image->imagePath); ?>']; var titles=['<?php _e($image->title); ?>']; var descriptions=['<?php _e($image->description); ?>']; jQuery.prettyPhoto.open(images,titles,descriptions);" style="cursor: pointer;"><img src="<?php _e($image->imagePath); ?>" width="75" alt="<?php _e($image->title); ?>" /></a><br /><i><?php _e('Click to preview', 'wp-easy-gallery-pro'); ?></i></td>
+                <td>                	
+                	<input type="hidden" name="edit_gId[]" value="<?php _e($image->gid); ?>" />
+					<input type="hidden" name="edit_imageId[]" value="<?php _e($image->Id); ?>" />                                        
+                	<p><strong>Image Path:</strong> <input type="text" name="edit_imagePath[]" size="75" value="<?php _e($image->imagePath); ?>" /></p>
+                    <p><strong>Image Title:</strong> <input type="text" name="edit_imageTitle[]" size="20" value="<?php _e($image->title); ?>" /></p>
+                    <p><strong>Image Description:</strong> <input type="text" name="edit_imageDescription[]" size="75" value="<?php _e($image->description); ?>" /></p>
+                    <p><strong>Sort Order:</strong> <input type="text" name="edit_imageSort[]" size="10" value="<?php _e($image->sortOrder); ?>" /></p>
+					<p><strong>Delete Image?</strong> <input type="checkbox" name="edit_imageDelete[]" value="<?php _e($image->Id); ?>" /></p>
                 </td>
                 <td></td>                
             </tr>
 			<?php } ?>
-        </tbody>
+        </tbody>		
      </table>
+	 <p class="major-publishing-actions left-float eg-right-margin"><input type="submit" name="Submit" class="button-primary" value="Save Changes" /></p>
+     </form>
+	 <div style="clear:both;"></div>
      <?php } ?>
      <br />     
 <p><strong>Try WP Easy Gallery Pro</strong><br /><em>Pro Features include: Multi-image uploader, Enhanced admin section for easier navigation, Image preview pop-up, and more...</em></p>
 <p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><img title="WP-Easy-Gallery-Pro_468x88" src="http://labs.hahncreativegroup.com/wp-content/uploads/2012/02/WP-Easy-Gallery-Pro_468x88.gif" alt="" width="468" height="88" /></a></p>
-<p><strong>Try WP Easy Gallery Premium</strong><br /><em>Premuim Features all of the Pro features plus unlimited upgrades.</em><br />
+<p><strong>Try WP Easy Gallery Premium</strong><br /><em>Premium Features all of the Pro features plus unlimited upgrades.</em><br />
 <a href="http://wordpress-photo-gallery.com/" target="_blank">WP Easy Gallery Premium</a></p>
 <p><strong>Try Custom Post Donations Pro</strong><br /><em>This WordPress plugin will allow you to create unique customized PayPal donation widgets to insert into your WordPress posts or pages and accept donations. Features include: Multiple Currencies, Multiple PayPal accounts, Custom donation form display titles, and more.</em></p>
 <p><a href="http://labs.hahncreativegroup.com/wordpress-plugins/custom-post-donations-pro/?src=wpeg"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" alt="Custom Post Donations Pro" /></a></p>
