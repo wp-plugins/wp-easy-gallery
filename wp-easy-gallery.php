@@ -105,7 +105,7 @@
 	 
 	 function wp_custom_style() {
 		$styles = get_option('wp_easy_gallery_defaults');
-		echo "<style>.wp-easy-gallery img {".$styles['custom_style']."}</style>";
+		echo "<!-- WP Easy Gallery 3.5: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/ -->\n<style>.wp-easy-gallery img {".$styles['custom_style']."}</style>";
 	}
 	add_action('wp_head', 'wp_custom_style');
 		

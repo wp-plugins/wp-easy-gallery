@@ -1,3 +1,6 @@
+// WP Easy Gallery 3.5
+// http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
+
 jQuery(document).ready(function() {
 
 jQuery('#upload_image_button').click(function() { 
