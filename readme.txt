@@ -92,6 +92,10 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 == Changelog ==
 
+**Jan. 28, 2014 - v.3.6**
+
+* Added thumbnail style on hover
+
 **Nov. 5, 2013 - v3.5**
 
 * Save all image changes in one click
