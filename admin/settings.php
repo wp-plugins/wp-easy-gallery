@@ -18,7 +18,7 @@ if (isset($_POST['defaultSettings'])) {
 $default_options = get_option('wp_easy_gallery_defaults');
 
 ?>
-<div class='wrap wp-easy-gallery'>
+<div class='wrap wp-easy-gallery-admin'>
 	<h2>Easy Gallery</h2>
     <p style="width: 50%; float: left;">This is a listing of all galleries.</p>
     <p style="float: right;"><a href="http://labs.hahncreativegroup.com/wordpress-plugins/wp-easy-gallery-pro-simple-wordpress-gallery-plugin/?src=wpeg" target="_blank"><strong><em>Try WP Easy Gallery Pro</em></strong></a></p>

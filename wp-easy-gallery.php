@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 3.5
+	Version: 3.6
 	Author URI: http://labs.hahncreativegroup.com/
 	*/	
 	
@@ -105,7 +105,7 @@
 	 
 	 function wp_custom_style() {
 		$styles = get_option('wp_easy_gallery_defaults');
-		echo "<!-- WP Easy Gallery 3.5: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/ -->\n<style>.wp-easy-gallery img {".$styles['custom_style']."}</style>";
+		echo "<!-- WP Easy Gallery: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/ -->\n<style>.wp-easy-gallery img {".$styles['custom_style']."}</style>";
 	}
 	add_action('wp_head', 'wp_custom_style');
 		
@@ -131,6 +131,8 @@
 		wp_enqueue_script('easyGalleryLoader');
 		wp_register_style( 'prettyPhoto_stylesheet', WP_PLUGIN_URL.'/wp-easy-gallery/css/prettyPhoto.css');
 		wp_enqueue_style('prettyPhoto_stylesheet');
+		wp_register_style('easy-gallery-style', WP_PLUGIN_URL.'/wp-easy-gallery/css/default.css');
+	  	wp_enqueue_style('easy-gallery-style');
 	}
 	add_action('wp_enqueue_scripts', 'attach_EasyGallery_scripts');
 	
@@ -184,8 +186,8 @@
 		// Add a second submenu to the custom top-level menu:
 		add_submenu_page('hcg-admin', __('Easy Gallery >> Help (FAQ)','menu-hcg'), __('Help (FAQ)','menu-hcg'), 'manage_options', 'help', 'help');
 		
-		wp_register_style('easy-gallery-style', WP_PLUGIN_URL.'/wp-easy-gallery/css/wp-easy-gallery.css');
-	  	wp_enqueue_style('easy-gallery-style');
+		wp_register_style('easy-gallery-admin-style', WP_PLUGIN_URL.'/wp-easy-gallery/css/wp-easy-gallery-admin.css');
+	  	wp_enqueue_style('easy-gallery-admin-style');
 
 	}
 	
@@ -257,7 +259,7 @@
 		$thumbwidth = ($gallery->thumbwidth < 1 || $gallery->thumbwidth == "auto") ? "" : "width='".$gallery->thumbwidth."'";
 		$thumbheight = ($gallery->thumbheight < 1 || $gallery->thumbheight == "auto") ? "" : "height='".$gallery->thumbheight."'";
 		
-		$galleryLink = "<a class=\"wp-easy-gallery\" onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a>";
+		$galleryLink = "<span class=\"wp-easy-gallery\"><a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a></span>";
 		return $galleryLink;
 	}	
 	

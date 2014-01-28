@@ -3,8 +3,8 @@ Contributors: hahncgdev
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U
 Tags: image, images, media, photo, photo albums, photo gallery, photos, picture, pictures, Post, posts, plugin, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 2.6
-Tested up to: 3.8
-Stable tag: 3.5
+Tested up to: 3.8.1
+Stable tag: 3.6
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
@@ -51,7 +51,7 @@ Be sure to also check out these other plugins for WordPress: <a href='http://lab
 The developer of this plugin is not in any way affiliated to the developer of the prettyPhoto jQuery plugin.
 prettyPhoto is being developed by [Stephane Caron](http://www.no-margin-for-errors.com) and licensed under the [GPLv2 license](http://www.gnu.org/licenses/gpl-2.0.html). As the developer states, prettyPhoto is "totally free to use (...) in all projects, even commercial ones".
 
-For more information on prettyPhoto (version 3.1.5) please visit the project page:
+For more information on prettyPhoto please visit the project page:
 [prettyPhoto project page](http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/ "prettyPhoto project page")
 
 Please consider a donation to the author of prettyPhoto in order to support the project!

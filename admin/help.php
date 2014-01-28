@@ -1,4 +1,4 @@
-<div class='wrap wp-easy-gallery'>
+<div class='wrap wp-easy-gallery-admin'>
 	<h2>Easy Gallery - Help (FAQ)</h2>
     <p><em><strong>How do I use WP Easy Gallery?</strong></em></p>
     <p>Here is video tutorial on setting up and using WP Easy Gallery: <a href="http://labs.hahncreativegroup.com/2012/07/creating-wordpress-image-galleries-with-wp-easy-gallery/" target="_blank">Creating WordPress Image Galleries with WP Easy Gallery</a></p>

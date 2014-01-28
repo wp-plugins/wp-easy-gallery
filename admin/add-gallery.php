@@ -46,7 +46,7 @@ $galleryAdded = false;
 		}
 	}
 ?>
-<div class='wrap wp-easy-gallery'>
+<div class='wrap wp-easy-gallery-admin'>
 	<h2>Easy Gallery - Add Galleries</h2>
     <?php
 	if($galleryAdded) {

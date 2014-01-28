@@ -73,7 +73,7 @@ if(isset($_POST['editing_gid'])) {
 
 ?>
 
-<div class='wrap wp-easy-gallery'>
+<div class='wrap wp-easy-gallery-admin'>
 	<h2>Easy Gallery</h2>    
     <p>Add new images to gallery</p>
 	<?php if(!isset($_POST['select_gallery']) && !isset($_POST['galleryId']) && !isset($_POST['editing_images'])) { ?>

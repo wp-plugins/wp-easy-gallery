@@ -45,7 +45,7 @@ if(isset($_POST['hcg_edit_gallery'])) {
 	}
 }
 ?>
-<div class='wrap wp-easy-gallery'>
+<div class='wrap wp-easy-gallery-admin'>
 	<h2>Easy Gallery - Edit Galleries</h2>
     <?php if(!isset($_POST['select_gallery']) && !isset($_POST['galleryId']) && !isset($_POST['hcg_edit_gallery'])) { ?>
     <p>Select a galley</p>		
