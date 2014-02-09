@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 3.6
+	Version: 3.6.1
 	Author URI: http://labs.hahncreativegroup.com/
 	*/	
 	
@@ -73,10 +73,11 @@
 				$gallery_options = array(
 					'version'		   => 'free',
 					'thumbnail_width'  => 'auto',
-					'thunbnail_height' => 'auto',
+					'thumbnail_height' => 'auto',
 					'hide_overlay'	   => 'false',
 					'hide_social'	   => 'false',
-					'custom_style'	   => ''
+					'custom_style'	   => '',
+					'use_default_style'=> 'true'
 				);
 				
 				add_option('wp_easy_gallery_defaults', $gallery_options);
@@ -97,6 +98,13 @@
 				if (!in_array('custom_style', $keys)) {
 					$wpEasyGalleryOptions['custom_style'] = "";	
 				}
+				if (!in_array('use_default_style', $keys)) {
+					$wpEasyGalleryOptions['use_default_style'] = "true";	
+				}
+				if (!in_array('thumbnail_height', $keys)) {
+					$wpEasyGalleryOptions['thumbnail_height'] = $wpEasyGalleryOptions['thunbnail_height'];
+					unset($wpEasyGalleryOptions['thunbnail_height']);
+				}
 				
 				update_option('wp_easy_gallery_defaults', $wpEasyGalleryOptions);	
 			}
@@ -113,7 +121,7 @@
 		$wpEasyGalleryOptions = get_option('wp_easy_gallery_defaults');
 		wp_enqueue_script('jquery');
 		wp_register_script('jquery_migrate', WP_PLUGIN_URL.'/wp-easy-gallery/js/jquery-migrate.js', array('jquery'));
-		wp_enqueue_script('jquery_migrate');
+		//wp_enqueue_script('jquery_migrate');
 		wp_register_script('prettyPhoto', WP_PLUGIN_URL.'/wp-easy-gallery/js/jquery.prettyPhoto.js', array('jquery'));
 		if ($wpEasyGalleryOptions['hide_social'] == 'true' && $wpEasyGalleryOptions['hide_overlay'] == 'false') {
 			wp_register_script('easyGalleryLoader', WP_PLUGIN_URL.'/wp-easy-gallery/js/EasyGalleryLoader_hideSocial.js', array('prettyPhoto', 'jquery'));
@@ -131,8 +139,10 @@
 		wp_enqueue_script('easyGalleryLoader');
 		wp_register_style( 'prettyPhoto_stylesheet', WP_PLUGIN_URL.'/wp-easy-gallery/css/prettyPhoto.css');
 		wp_enqueue_style('prettyPhoto_stylesheet');
-		wp_register_style('easy-gallery-style', WP_PLUGIN_URL.'/wp-easy-gallery/css/default.css');
-	  	wp_enqueue_style('easy-gallery-style');
+		if ($wpEasyGalleryOptions['use_default_style'] == 'true') {
+			wp_register_style('easy-gallery-style', WP_PLUGIN_URL.'/wp-easy-gallery/css/default.css');
+	  		wp_enqueue_style('easy-gallery-style');
+		}
 	}
 	add_action('wp_enqueue_scripts', 'attach_EasyGallery_scripts');
 	
