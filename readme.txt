@@ -4,9 +4,9 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image, images, media, photo, photo albums, photo gallery, photos, picture, pictures, Post, posts, plugin, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 2.6
 Tested up to: 3.8.1
-Stable tag: 3.6.1
+Stable tag: 3.6.2
 
-WP Easy Gallery is an easy to use WordPress Gallery Plugin.
+WP Easy Gallery is an easy to use WordPress Image Gallery Plugin.
 
 == Description ==
 
@@ -91,6 +91,10 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>, <a href='http://www.wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery Plugin'>WordPress Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/reflex-gallery/' title='Responsive Photo Gallery'>Responsive Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/galeria-de-imagenes-wordpress/' title='Galeria de Imagenes WordPress'>Galeria de Imagenes WordPress</a>, <a href='http://labs.hahncreativegroup.com/2012/12/french-translation-added-for-wp-easy-gallery-pro/' title='Galerie d'images pour WordPress'>Galerie d'images pour WordPress</a>
 
 == Changelog ==
+
+**Feb. 19, 2014 - v3.6.2**
+
+* Changed short code to use key instead of name. Change is backwards compatible and will not break or require changing existing gallery short codes.
 
 **Feb. 8, 2014 - v3.6.1**
 

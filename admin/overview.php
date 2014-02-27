@@ -56,7 +56,7 @@ $default_options = get_option('wp_easy_gallery_defaults');
         	<?php foreach($galleryResults as $gallery) { ?>				
             <tr>
             	<td><?php _e($gallery->name); ?></td>
-                <td><input type="text" size="40" value="[EasyGallery id='<?php _e($gallery->slug); ?>']" /></td>
+                <td><input type="text" size="40" value="[EasyGallery key='<?php _e($gallery->Id); ?>']" /></td>
                 <td><?php _e($gallery->description); ?></td>
                 <td class="major-publishing-actions">
                 <form name="delete_gallery_<?php _e($gallery->Id); ?>" method ="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">

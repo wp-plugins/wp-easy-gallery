@@ -53,7 +53,7 @@ $default_options = get_option('wp_easy_gallery_defaults');
                 <td>Show or Hide the social sharing buttons in modal window popup. Check to hide the social sharing buttons.</td>            
             </tr>
             <tr>            	
-            	<td>Use/Disable Default Thumbnail Theme</td>
+            	<td>Use Default Thumbnail Theme</td>
                 <td><input type="checkbox" name="use_default_style" id="use_default_style"<?php _e(($default_options['use_default_style'] == 'true') ? "checked='checked'" : ""); ?> value="true" /></td>
                 <td>Use default thumbnail style (uncheck to disable new thumbnail CSS).</td>            
             </tr>

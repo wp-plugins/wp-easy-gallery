@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 3.6.1
+	Version: 3.6.2
 	Author URI: http://labs.hahncreativegroup.com/
 	*/	
 	
@@ -240,13 +240,18 @@
 	 */
 	 
 	// function creates the gallery
-	function createEasyGallery($galleryName)	
+	function createEasyGallery($galleryName, $id)	
 	{			
 		global $wpdb;
 		global $easy_gallery_table;
 		global $easy_gallery_image_table;
 		
-		$gallery = $wpdb->get_row( "SELECT Id, name, thumbnail, thumbwidth, thumbheight FROM $easy_gallery_table WHERE slug = '$galleryName'" );
+		if ($id != "-1") {
+			$gallery = $wpdb->get_row( "SELECT Id, name, thumbnail, thumbwidth, thumbheight FROM $easy_gallery_table WHERE Id = '$id'" );
+		}
+		else {
+			$gallery = $wpdb->get_row( "SELECT Id, name, thumbnail, thumbwidth, thumbheight FROM $easy_gallery_table WHERE slug = '$galleryName'" );
+		}
 		$imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gallery->Id ORDER BY sortOrder ASC" );
 		
 		$images = array();
@@ -274,7 +279,8 @@
 	}	
 	
 	function EasyGallery_Handler($atts) {
-	  return createEasyGallery($atts['id']);
+	  $atts = shortcode_atts( array( 'id' => '-1', 'key' => '-1'), $atts );
+	  return createEasyGallery($atts['id'], $atts['key']);
   }
   add_shortcode('EasyGallery', 'EasyGallery_Handler');	
 ?>
