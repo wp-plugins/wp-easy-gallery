@@ -92,7 +92,7 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 == Changelog ==
 
-**Feb. 19, 2014 - v3.6.2**
+**Feb. 26, 2014 - v3.6.2**
 
 * Changed short code to use key instead of name. Change is backwards compatible and will not break or require changing existing gallery short codes.
 
