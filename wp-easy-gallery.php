@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 3.6.2
+	Version: 3.6.3
 	Author URI: http://labs.hahncreativegroup.com/
 	*/	
 	
@@ -71,13 +71,14 @@
 	 function define_options() {
 		 if(!get_option('wp_easy_gallery_defaults')) {
 				$gallery_options = array(
-					'version'		   => 'free',
-					'thumbnail_width'  => 'auto',
-					'thumbnail_height' => 'auto',
-					'hide_overlay'	   => 'false',
-					'hide_social'	   => 'false',
-					'custom_style'	   => '',
-					'use_default_style'=> 'true'
+					'version'		   		=> 'free',
+					'thumbnail_width'  		=> 'auto',
+					'thumbnail_height' 		=> 'auto',
+					'hide_overlay'	   		=> 'false',
+					'hide_social'	   		=> 'false',
+					'custom_style'	   		=> '',
+					'use_default_style'		=> 'true',
+					'disable_drop_shadow'	=> 'false'
 				);
 				
 				add_option('wp_easy_gallery_defaults', $gallery_options);
@@ -100,6 +101,9 @@
 				}
 				if (!in_array('use_default_style', $keys)) {
 					$wpEasyGalleryOptions['use_default_style'] = "true";	
+				}
+				if (!in_array('disable_drop_shadow', $keys)) {
+					$wpEasyGalleryOptions['disable_drop_shadow'] = "false";	
 				}
 				if (!in_array('thumbnail_height', $keys)) {
 					$wpEasyGalleryOptions['thumbnail_height'] = $wpEasyGalleryOptions['thunbnail_height'];
@@ -274,7 +278,10 @@
 		$thumbwidth = ($gallery->thumbwidth < 1 || $gallery->thumbwidth == "auto") ? "" : "width='".$gallery->thumbwidth."'";
 		$thumbheight = ($gallery->thumbheight < 1 || $gallery->thumbheight == "auto") ? "" : "height='".$gallery->thumbheight."'";
 		
-		$galleryLink = "<span class=\"wp-easy-gallery\"><a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img class=\"dShadow trans\" src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a></span>";
+		$options = get_option('wp_easy_gallery_defaults');
+		$dShadow = ($options['disable_drop_shadow'] != "true") ? "class=\"dShadow trans\"" : "";
+		
+		$galleryLink = "<span class=\"wp-easy-gallery\"><a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img ".$dShadow." src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a></span>";
 		return $galleryLink;
 	}	
 	

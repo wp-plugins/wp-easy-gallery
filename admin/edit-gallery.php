@@ -10,7 +10,7 @@ $galleryResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_table" );
 //Select gallery
 if(isset($_POST['select_gallery']) || isset($_POST['galleryId'])) {
 	if(check_admin_referer('wpeg_select_gallery','wpeg_select_gallery')) {
-	  $gid = intval((isset($_POST['select_gallery'])) ? mysql_real_escape_string($_POST['select_gallery']) : mysql_real_escape_string($_POST['galleryId']));
+	  $gid = intval((isset($_POST['select_gallery'])) ? esc_sql($_POST['select_gallery']) : esc_sql($_POST['galleryId']));
 	  $imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gid ORDER BY sortOrder ASC" );
 	  $gallery = $wpdb->get_row( "SELECT * FROM $easy_gallery_table WHERE Id = $gid" );
 	}
