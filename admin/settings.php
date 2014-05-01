@@ -8,6 +8,7 @@ if (isset($_POST['defaultSettings'])) {
 	  $temp_defaults['hide_social'] = isset($_POST['hide_social']) ? $_POST['hide_social'] : 'false';
 	  $temp_defaults['use_default_style'] = isset($_POST['use_default_style']) ? $_POST['use_default_style'] : 'false';
 	  $temp_defaults['custom_style'] = isset($_POST['custom_style']) ? $_POST['custom_style'] : '';
+	  $temp_defaults['drop_shadow'] = isset($_POST['drop_shadow']) ? $_POST['drop_shadow'] : 'false';
 	  
 	  update_option('wp_easy_gallery_defaults', $temp_defaults);
 	  
@@ -56,6 +57,11 @@ $default_options = get_option('wp_easy_gallery_defaults');
             	<td>Use Default Thumbnail Theme</td>
                 <td><input type="checkbox" name="use_default_style" id="use_default_style"<?php _e(($default_options['use_default_style'] == 'true') ? "checked='checked'" : ""); ?> value="true" /></td>
                 <td>Use default thumbnail style (uncheck to disable new thumbnail CSS).</td>            
+            </tr>
+			<tr>            	
+            	<td>Thumbnail Dropshadow</td>
+                <td><input type="checkbox" name="drop_shadow" id="drop_shadow"<?php _e(($default_options['drop_shadow'] == 'true') ? "checked='checked'" : ""); ?> value="true" /></td>
+                <td>Use default thumbnail dropshadow (uncheck to disable dropshadow CSS).</td>            
             </tr>
             <tr>
             	<td>Custom Thumbnail Style</td>

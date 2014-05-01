@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 3.6.3
+	Version: 3.7
 	Author URI: http://labs.hahncreativegroup.com/
 	*/	
 	
@@ -102,8 +102,8 @@
 				if (!in_array('use_default_style', $keys)) {
 					$wpEasyGalleryOptions['use_default_style'] = "true";	
 				}
-				if (!in_array('disable_drop_shadow', $keys)) {
-					$wpEasyGalleryOptions['disable_drop_shadow'] = "false";	
+				if (!in_array('drop_shadow', $keys)) {
+					$wpEasyGalleryOptions['drop_shadow'] = "true";	
 				}
 				if (!in_array('thumbnail_height', $keys)) {
 					$wpEasyGalleryOptions['thumbnail_height'] = $wpEasyGalleryOptions['thunbnail_height'];
@@ -279,7 +279,7 @@
 		$thumbheight = ($gallery->thumbheight < 1 || $gallery->thumbheight == "auto") ? "" : "height='".$gallery->thumbheight."'";
 		
 		$options = get_option('wp_easy_gallery_defaults');
-		$dShadow = ($options['disable_drop_shadow'] != "true") ? "class=\"dShadow trans\"" : "";
+		$dShadow = ($options['drop_shadow'] == "true") ? "class=\"dShadow trans\"" : "";
 		
 		$galleryLink = "<span class=\"wp-easy-gallery\"><a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img ".$dShadow." src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a></span>";
 		return $galleryLink;
