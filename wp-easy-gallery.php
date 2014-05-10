@@ -124,7 +124,7 @@
 	function attach_EasyGallery_scripts() {
 		$wpEasyGalleryOptions = get_option('wp_easy_gallery_defaults');
 		wp_enqueue_script('jquery');
-		wp_register_script('jquery_migrate', WP_PLUGIN_URL.'/wp-easy-gallery/js/jquery-migrate.js', array('jquery'));
+		//wp_register_script('jquery_migrate', WP_PLUGIN_URL.'/wp-easy-gallery/js/jquery-migrate.js', array('jquery'));
 		//wp_enqueue_script('jquery_migrate');
 		wp_register_script('prettyPhoto', WP_PLUGIN_URL.'/wp-easy-gallery/js/jquery.prettyPhoto.js', array('jquery'));
 		if ($wpEasyGalleryOptions['hide_social'] == 'true' && $wpEasyGalleryOptions['hide_overlay'] == 'false') {

@@ -6,11 +6,11 @@ Requires at least: 2.6
 Tested up to: 3.9
 Stable tag: 3.7
 
-WP Easy Gallery is an easy to use WordPress Image Gallery Plugin.
+WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
 == Description ==
 
-WP Easy Gallery is an easy to use WordPress image gallery plugin that allows you to create and manage multiple photo galleries through a simple admin interface.
+WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to create and manage multiple photo galleries through a simple admin interface.
 
 Features include:
 
@@ -22,7 +22,7 @@ Features include:
 - WordPress ShortCodes for easy content integration
 - And much more...
 
-For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>WP Easy Gallery</a>
+For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/' title='WordPress Gallery Plugin'>WP Easy Gallery</a>
 
 Also try <a href='http://wordpress.org/extend/plugins/reflex-gallery/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery</a> or <a href='http://wordpress-photo-gallery.com/#gallery' title='Responsive WordPress Photo Gallery'>ReFlex Gallery Pro</a> - ReFlex Gallery is a fully responsive WordPress image gallery plugin that is actually two galleries in one.
 
@@ -56,7 +56,7 @@ For more information on prettyPhoto please visit the project page:
 
 Please consider a donation to the author of prettyPhoto in order to support the project!
 
-<a href='http://labs.hahncreativegroup.com/wordpress-plugins/'>Plugins for WordPress</a> by HahnCreativeGroup.
+<a href='http://labs.hahncreativegroup.com/wordpress-plugins/'>WordPress Plugins</a> by HahnCreativeGroup.
 
 == Screenshots ==
 
