@@ -12,7 +12,7 @@ WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
 WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to create and manage multiple photo galleries through a simple admin interface.
 
-Features include:
+Gallery plugin features include:
 
 - Enhanced social sharing capabilites for images
 - Newly added class name (wp-easy-gallery) for easy thumbnail styling
@@ -28,7 +28,7 @@ Also try <a href='http://wordpress.org/extend/plugins/reflex-gallery/' title='Re
 
 <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='image gallery'>WP Easy Gallery Pro Plugin</a>
 
-Pro features include:
+Pro gallery plugin features include:
 
 - Multiple image uploads to quickly populate your galleries
 - Improved admin panel for easier gallery and image navigation
@@ -68,7 +68,7 @@ Please consider a donation to the author of prettyPhoto in order to support the 
 
 == Installation ==
 
-1. Upload the `EasyGallery` directory to the `/wp-content/plugins/` directory
+1. Upload the `wp-easy-gallery` directory to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Create new galleries in the `Add Gallery` Panel
 1. Add images to galleries in the `Add Images` Panel
@@ -94,7 +94,7 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 **Apr. 30, 2014 - v3.7**
 
-* Added option to turn thumbnail dropshadow on/off.
+* Added option to turn gallery thumbnail dropshadowson/off.
 
 **Apr. 18, 2014 - v3.6.3**
 
