@@ -10,11 +10,13 @@ WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
 == Description ==
 
-WP Easy Gallery is an easy to use WordPress gallery plugin that allows you to create and manage multiple photo galleries through a simple admin interface.
+WP Easy Gallery is an easy to use **WordPress Gallery Plugin** that allows you to create and manage multiple photo galleries through a simple admin interface.
+
+### WordPress Gallery Plugin
 
 Gallery plugin features include:
 
-- Enhanced social sharing capabilites for images
+- Enhanced social sharing capabilites for images in your gallery
 - Newly added class name (wp-easy-gallery) for easy thumbnail styling
 - Upload unique thumbnail image for galleries and set custom dimensions
 - Include multiple galleries on a page/post
@@ -22,7 +24,7 @@ Gallery plugin features include:
 - WordPress ShortCodes for easy content integration
 - And much more...
 
-For more information about this wordpress gallery plugin: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/' title='WordPress Gallery Plugin'>WP Easy Gallery</a>
+For more information about this *wordpress gallery plugin*: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/' title='WordPress Gallery Plugin'>WP Easy Gallery</a>
 
 Also try <a href='http://wordpress.org/extend/plugins/reflex-gallery/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery</a> or <a href='http://wordpress-photo-gallery.com/#gallery' title='Responsive WordPress Photo Gallery'>ReFlex Gallery Pro</a> - ReFlex Gallery is a fully responsive WordPress image gallery plugin that is actually two galleries in one.
 
@@ -46,7 +48,7 @@ Pro gallery plugin features include:
 
 Be sure to also check out these other plugins for WordPress: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WP Easy Gallery Pro</a>, <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/' title='WordPress Image Gallery Plugin'>WP Easy Gallery Premium</a>, <a href='http://wordpress.org/extend/plugins/reflex-gallery/' title='Responsive WordPress Photo Gallery'>ReFlex Gallery</a>, <a href='http://wordpress-photo-gallery.com/#gallery' title='Responsive WordPress Photo Gallery'>ReFlex Gallery Pro</a>, <a href='http://wordpress-photo-gallery.com/reflex-gallery-premium/'>ReFlex Gallery Premium</a>, <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>WP Easy Gallery Premium</a>, <a href='http://labs.hahncreativegroup.com/paypal-for-wordpress/' title='PayPal for WordPress'>Custom Post Donations Pro</a>, <a href='http://labs.hahncreativegroup.com/wp-translate-pro/'>WP Translate Pro</a>, <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, <a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a>, <a href='http://labs.hahncreativegroup.com/wp-translate-pro/'>WP Translate Pro</a>, <a href="http://codecanyon.net/item/wordpressjquery-email-obfuscate-plugin/721738?ref=HahnCreativeGroup">Email Obfuscate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
 
-### License Notice
+**License Notice**
 
 The developer of this plugin is not in any way affiliated to the developer of the prettyPhoto jQuery plugin.
 prettyPhoto is being developed by [Stephane Caron](http://www.no-margin-for-errors.com) and licensed under the [GPLv2 license](http://www.gnu.org/licenses/gpl-2.0.html). As the developer states, prettyPhoto is "totally free to use (...) in all projects, even commercial ones".
