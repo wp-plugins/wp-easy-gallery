@@ -1,10 +1,10 @@
-=== WP Easy Gallery >> WordPress Gallery Plugin ===
+=== WP Easy Gallery > WordPress Gallery Plugin ===
 Contributors: hahncgdev
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U
 Tags: image, images, media, photo, photo albums, photo gallery, photos, picture, pictures, Post, posts, plugin, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 3.7
+Stable tag: 3.8
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
@@ -26,9 +26,9 @@ Quickly displaying images in your WordPress posts or pages is extremely easy wit
 - Uses WordPress short code for easy content integration.
 - And much more...
 
-For more information about this *wordpress gallery plugin* see the demo: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/' title='WordPress Gallery Plugin'>WP Easy Gallery</a>
+For more information about this *wordpress gallery plugin* see the demo: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/' title='Simple WordPress Gallery Plugin'>WP Easy Gallery</a>
 
-<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='image gallery'>WP Easy Gallery Pro Plugin</a>
+<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Gallery Plugin'>WP Easy Gallery Pro > WordPress Gallery Plugin</a>
 
 = Pro gallery plugin features =
 
@@ -39,7 +39,7 @@ For more information about this *wordpress gallery plugin* see the demo: <a href
 - Galleries use 1st image in gallery for thumbnail by default. This can be changed for each individual gallery.
 - Set global thumbnail dimensions for all galleries. This can be overwritten for each gallery.
 - Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
-- German language support. (Sprachunterstutzung fur Deutsch) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
+- German language support. (Sprachunterstutzung fur Deutsch) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
 - Spanish Translation support. (Traducci&oacute;n al espa&ntilde;ol a&ntilde;adi&oacute;) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
 - Portuguese Translation support. (Tradu&ccedil;&atilde;o Portugu&ecirc;s Adicionado) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
 - French Translation support. (Traduction fran&ccedil;aise ajout&eacute;) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
@@ -94,6 +94,10 @@ Complete list of <a href='http://labs.hahncreativegroup.com/wordpress-plugins/'>
 Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>, <a href='http://www.wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery Plugin'>WordPress Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/reflex-gallery/' title='Responsive Photo Gallery'>Responsive Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/galeria-de-imagenes-wordpress/' title='Galeria de Imagenes WordPress'>Galeria de Imagenes WordPress</a>, <a href='http://labs.hahncreativegroup.com/2012/12/french-translation-added-for-wp-easy-gallery-pro/' title='Galerie d'images pour WordPress'>Galerie d'images pour WordPress</a>
 
 == Changelog ==
+
+**Jun. 10, 2014 - v3.8**
+
+* Added button to post/page editor for inserting short code.
 
 **Apr. 30, 2014 - v3.7**
 
