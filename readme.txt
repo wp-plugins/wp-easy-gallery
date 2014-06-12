@@ -1,4 +1,4 @@
-=== WP Easy Gallery > WordPress Gallery Plugin ===
+=== WP Easy Gallery &#187; WordPress Gallery Plugin ===
 Contributors: hahncgdev
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U
 Tags: image, images, media, photo, photo albums, photo gallery, photos, picture, pictures, Post, posts, plugin, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
