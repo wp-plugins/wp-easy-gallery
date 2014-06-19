@@ -28,7 +28,7 @@ Quickly displaying images in your WordPress posts or pages is extremely easy wit
 
 For more information about this *wordpress gallery plugin* see the demo: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/' title='Simple WordPress Gallery Plugin'>WP Easy Gallery</a>
 
-<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Gallery Plugin'>WP Easy Gallery Pro > WordPress Gallery Plugin</a>
+<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Gallery Plugin'>WP Easy Gallery Pro &#187; WordPress Gallery Plugin</a>
 
 = Pro gallery plugin features =
 
@@ -43,6 +43,8 @@ For more information about this *wordpress gallery plugin* see the demo: <a href
 - Spanish Translation support. (Traducci&oacute;n al espa&ntilde;ol a&ntilde;adi&oacute;) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
 - Portuguese Translation support. (Tradu&ccedil;&atilde;o Portugu&ecirc;s Adicionado) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
 - French Translation support. (Traduction fran&ccedil;aise ajout&eacute;) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
+
+= Simple WordPress Gallery Plugin =
 
 <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress gallery plugin'>Upgrade to WP Easy Gallery Pro</a> or <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>WP Easy Gallery Premium</a> for unlimited upgrades
 
