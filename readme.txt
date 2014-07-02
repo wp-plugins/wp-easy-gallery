@@ -4,13 +4,13 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image, images, media, photo, photo albums, photo gallery, photos, picture, pictures, Post, posts, plugin, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 3.8
+Stable tag: 3.8.1
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
 == Description ==
 
-### WordPress Gallery Plugin
+### Simple WordPress Gallery Plugin
 
 WP Easy Gallery is the best free **WordPress gallery plugin**. WP Easy Gallery allows you to easily create and manage multiple photo galleries through a simple admin interface.
 
@@ -26,7 +26,7 @@ Quickly displaying images in your WordPress posts or pages is extremely easy wit
 - Uses WordPress short code for easy content integration.
 - And much more...
 
-For more information about this *wordpress gallery plugin* see the demo: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/' title='Simple WordPress Gallery Plugin'>WP Easy Gallery</a>
+For more information about this *simple WordPress gallery plugin* see the demo: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/' title='Simple WordPress Gallery Plugin'>WP Easy Gallery</a>
 
 <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Gallery Plugin'>WP Easy Gallery Pro &#187; WordPress Gallery Plugin</a>
 
@@ -96,6 +96,10 @@ Complete list of <a href='http://labs.hahncreativegroup.com/wordpress-plugins/'>
 Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>WordPress gallery plugin</a>, <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/'>Easy Gallery</a>, <a href='http://www.wordpress-photo-gallery.com/' title='Responsive WordPress Photo Gallery Plugin'>WordPress Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/reflex-gallery/' title='Responsive Photo Gallery'>Responsive Photo Gallery</a>, <a href='http://labs.hahncreativegroup.com/galeria-de-imagenes-wordpress/' title='Galeria de Imagenes WordPress'>Galeria de Imagenes WordPress</a>, <a href='http://labs.hahncreativegroup.com/2012/12/french-translation-added-for-wp-easy-gallery-pro/' title='Galerie d'images pour WordPress'>Galerie d'images pour WordPress</a>
 
 == Changelog ==
+
+**July 1, 2014 - v3.8.1**
+
+* Bug fixes to short code button
 
 **Jun. 10, 2014 - v3.8**
 

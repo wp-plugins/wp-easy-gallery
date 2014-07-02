@@ -53,7 +53,6 @@ jQuery(function(){
 		url: '../wp-content/plugins/wp-easy-gallery/admin/ws.php',
 		success: function(result) {
 			galleries = result.wpEasyGallery;
-			console.log(galleries.length);
 			for (var i = 0; i < galleries.length; i++) {
 				galleryOptions += "<option value='"+galleries[i].id+"'>"+galleries[i].name+"</option>";
 			}

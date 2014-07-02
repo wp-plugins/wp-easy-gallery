@@ -1,11 +1,11 @@
 <?php
 	/*
 	Plugin Name: WP Easy Gallery
-	Plugin URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
+	Plugin URI: http://labs.hahncreativegroup.com/wordpress-gallery-plugin/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 3.8
-	Author URI: http://labs.hahncreativegroup.com/
+	Version: 3.8.1
+	Author URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	*/	
 	
 	/* ==================================================================================
@@ -117,7 +117,7 @@
 	 
 	 function wp_custom_style() {
 		$styles = get_option('wp_easy_gallery_defaults');
-		echo "<!-- WP Easy Gallery: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/ -->\n<style>.wp-easy-gallery img {".$styles['custom_style']."}</style>";		
+		echo "<!-- WP Easy Gallery: http://labs.hahncreativegroup.com/wordpress-gallery-plugin/ -->\n<style>.wp-easy-gallery img {".$styles['custom_style']."}</style>";		
 	}
 	add_action('wp_head', 'wp_custom_style');
 		
@@ -291,16 +291,16 @@
   }
   add_shortcode('EasyGallery', 'EasyGallery_Handler');	
   
-  add_action( 'init', 'code_button' );
-function code_button() {
-    add_filter( "mce_external_plugins", "code_add_button" );
-    add_filter( 'mce_buttons', 'code_register_button' );
+  add_action( 'init', 'wpeg_code_button' );
+function wpeg_code_button() {
+    add_filter( "mce_external_plugins", "wpeg_code_add_button" );
+    add_filter( 'mce_buttons', 'wpeg_code_register_button' );
 }
-function code_add_button( $plugin_array ) {
+function wpeg_code_add_button( $plugin_array ) {
     $plugin_array['wpegbutton'] = $dir = plugins_url( 'js/shortcode.js', __FILE__ );
     return $plugin_array;
 }
-function code_register_button( $buttons ) {
+function wpeg_code_register_button( $buttons ) {
     array_push( $buttons, 'wpegselector' );
     return $buttons;
 }
