@@ -24,6 +24,7 @@ Quickly displaying images in your WordPress posts or pages is extremely easy wit
 - Include multiple galleries on a page or post.
 - Set the 'sort order' of images in the galleries.
 - Uses WordPress short code for easy content integration.
+- Short code button for easy content insertion.
 - And much more...
 
 For more information about this *simple WordPress gallery plugin* see the demo: <a href='http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/' title='Simple WordPress Gallery Plugin'>WP Easy Gallery</a>
@@ -38,7 +39,8 @@ For more information about this *simple WordPress gallery plugin* see the demo: 
 - Ability to show or hide gallery overlay.
 - Galleries use 1st image in gallery for thumbnail by default. This can be changed for each individual gallery.
 - Set global thumbnail dimensions for all galleries. This can be overwritten for each gallery.
-- Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site
+- Pop-up preview for each image - see how each gallery image will look in the pop-up window on your site.
+- Short code button for easy content insertion.
 - German language support. (Sprachunterstutzung fur Deutsch) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
 - Spanish Translation support. (Traducci&oacute;n al espa&ntilde;ol a&ntilde;adi&oacute;) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
 - Portuguese Translation support. (Tradu&ccedil;&atilde;o Portugu&ecirc;s Adicionado) (<a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' title='WordPress Image Gallery Plugin'>Pro</a> / <a href='http://labs.hahncreativegroup.com/wp-easy-gallery-premium/'>Premium</a> Versions)
@@ -57,7 +59,7 @@ Be sure to also check out these other WordPress Plugins.
 <a href='http://wordpress-photo-gallery.com/reflex-gallery-premium/'>ReFlex Gallery Premium</a>, 
 <a href='http://wordpress.org/extend/plugins/custom-post-donations/'>Custom Post Donations</a>, 
 <a href='http://labs.hahncreativegroup.com/paypal-for-wordpress/' title='PayPal for WordPress'>Custom Post Donations Pro</a>, 
-<a href='http://wordpress.org/extend/plugins/wp-translate/'>WP Translate</a>, 
+<a href='http://labs.hahncreativegroup.com/google-translate-wordpress-plugin/'>WP Translate</a>, 
 <a href='http://labs.hahncreativegroup.com/wp-translate-pro/'>WP Translate Pro</a>, 
 <a href="http://codecanyon.net/item/wordpressjquery-email-obfuscate-plugin/721738?ref=HahnCreativeGroup">Email Obfuscate</a> and <a href='http://wordpress.org/extend/plugins/prosperity/'>Prosperity</a>.
 
