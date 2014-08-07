@@ -3,8 +3,8 @@ Contributors: hahncgdev
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PMZ2FPNJPH59U
 Tags: image, images, media, photo, photo albums, photo gallery, photos, picture, pictures, Post, posts, plugin, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 3.0
-Tested up to: 3.9.1
-Stable tag: 3.8.2
+Tested up to: 3.9.2
+Stable tag: 3.8.3
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
@@ -113,6 +113,10 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 <a href='http://labs.hahncreativegroup.com/2012/12/french-translation-added-for-wp-easy-gallery-pro/' title='Galerie d'images pour WordPress'>Galerie d'images pour WordPress</a>
 
 == Changelog ==
+
+**Aug. 7, 2014 - v3.8.3**
+
+* Verified WordPress 3.9.2 compatibility *
 
 **July 29, 2014 - v3.8.2**
 
