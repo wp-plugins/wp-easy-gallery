@@ -76,11 +76,11 @@ $default_options = get_option('wp_easy_gallery_defaults');
      <br />
 <div style="float: left; width: 60%; min-width: 488px;">     
 <p><strong>Try WP Easy Gallery Pro</strong><br /><em>Pro Features include: Multi-image uploader, Enhanced admin section for easier navigation, Image preview pop-up, and more...</em></p>
-<p><a href="http://labs.hahncreativegroup.com/wordpress-gallery-plugin/?src=wpeg" target="_blank"><img title="WP-Easy-Gallery-Pro_468x88" src="http://labs.hahncreativegroup.com/wp-content/uploads/2012/02/WP-Easy-Gallery-Pro_468x88.gif" alt="" width="468" height="88" /></a></p>
+<p><a href="http://labs.hahncreativegroup.com/wordpress-gallery-plugin/?src=wpeg" target="_blank"><img title="WP-Easy-Gallery-Pro_468x88" src="../wp-content/plugins/wp-easy-gallery/images/WP-Easy-Gallery-Pro_468x88.gif" alt="" width="468" height="88" /></a></p>
 <p><strong>Try WP Easy Gallery Premium</strong><br /><em>Premium Features all of the Pro features plus unlimited upgrades.</em><br />
 <a href="http://labs.hahncreativegroup.com/wp-easy-gallery-premium/" target="_blank">WP Easy Gallery Premium</a></p>
 <p><strong>Try Custom Post Donations Pro</strong><br /><em>This WordPress plugin will allow you to create unique customized PayPal donation widgets to insert into your WordPress posts or pages and accept donations. Features include: Multiple Currencies, Multiple PayPal accounts, Custom donation form display titles, and more.</em></p>
-<p><a href="http://labs.hahncreativegroup.com/wordpress-paypal-plugin/?src=wpeg"><img src="http://labs.hahncreativegroup.com/wp-content/uploads/2011/10/CustomPostDonationsPro-Banner.gif" width="374" height="60" alt="Custom Post Donations Pro" /></a></p>
+<p><a href="http://labs.hahncreativegroup.com/wordpress-paypal-plugin/?src=wpeg"><img src="../wp-content/plugins/wp-easy-gallery/images/CustomPostDonationsPro-Banner.gif" width="374" height="60" alt="Custom Post Donations Pro" /></a></p>
 <p><strong>Try ReFlex Gallery</strong><br /><em>A fully responsive WordPress image gallery plugin that is actually two galleries in one.</em><br />
 <a href="http://wordpress-photo-gallery.com/" target="_blank">ReFlex Gallery</a></p>
 <p><strong>Try Email Obfuscate</strong><br /><em>Email Obfuscate is a Lightweight WordPress/jQuery plugin that prevents spam-bots from harvesting your email addresses by dynamically obfuscating email addresses on your site.</em><br /><a href="http://codecanyon.net/item/wordpressjquery-email-obfuscate-plugin/721738?ref=HahnCreativeGroup" target="_blank">Email Obfuscate Plugin</a></p>
@@ -89,29 +89,13 @@ $default_options = get_option('wp_easy_gallery_defaults');
 <p><em>Please consider making a donatation for the continued development of this plugin. Thanks.</em></p>
 <p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=PMZ2FPNJPH59U" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="PayPal - The safer, easier way to pay online!"><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></a></p>
 </div>
-<div style="float: right; width: 25%; height: 700px; padding: 10px; min-width: 165px;">
-<?php
-$url = "http://labs.hahncreativegroup.com/feed/";
-$rss = simplexml_load_file($url);
-if($rss)
-{
-  echo '<h3>'.$rss->channel->title.'</h3>';
-  $items = $rss->channel->item;
-  $count = 0;
-  foreach($items as $item)
-  {
-	$count++;	
-	$title = $item->title;
-	$link = $item->link;
-	$published_on = $item->pubDate;
-	$description = $item->description;
-	echo '<h4><a href="'.$link.'">'.$title.'</a></h4>';
-	echo '<p>'.$description.'</p>';
-	if ($count >= 4) {
-		break;	
-	}
-  }
-}
-?>
+<div id="rss" style="float: right; width: 25%; height: 700px; padding: 10px; min-width: 165px;">
 </div>
+<script type="text/javascript">
+jQuery(document).ready(function(){			
+	jQuery.ajax({url:"../wp-content/plugins/wp-easy-gallery/admin/rss.php",success:function(result){
+		jQuery("#rss").html(result);
+  }});
+});
+</script>
 </div>

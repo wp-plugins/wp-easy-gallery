@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image, images, media, photo, photo albums, photo gallery, photos, picture, pictures, Post, posts, plugin, wordpress gallery plugin, wp gallery plugin, gallery, gallery for wordpress, wordpress gallery, easy gallery, images gallery, image gallery, wp gallery, easy image gallery, free photo gallery, wp easy gallery, wordpress photo gallery, wordpress photo gallery plugin, wp gallery plugins, galeria imagenes
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 3.8.3
+Stable tag: 4.0
 
 WP Easy Gallery is an easy to use WordPress Gallery Plugin.
 
@@ -18,6 +18,7 @@ Quickly displaying images in your WordPress posts or pages is extremely easy wit
 
 = Gallery plugin features include =
 
+- **NEW** Display galleries as default WordPress style galleries (option is on settings page)
 - Enhanced social sharing for images in your gallery.
 - Newly added class name (wp-easy-gallery) for easy thumbnail styling.
 - Upload unique thumbnail image for galleries and set custom dimensions.
@@ -114,9 +115,16 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 == Changelog ==
 
+** Oct. 9, 2014 - v4.0 **
+
+* Added ability to render gallery as default WordPress style gallery
+* Added ability to customize number of columns for gallery display
+* Fixed bug with settings page not showing in admin section
+* Extracted RSS feed to an asynchronous call to allow admin pages to load quicker
+
 **Aug. 7, 2014 - v3.8.3**
 
-* Verified WordPress 3.9.2 compatibility *
+* Verified WordPress 3.9.2 compatibility
 
 **July 29, 2014 - v3.8.2**
 

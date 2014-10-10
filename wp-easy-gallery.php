@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-gallery-plugin/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 3.8.3
+	Version: 4.0
 	Author URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	*/	
 	
@@ -78,7 +78,9 @@
 					'hide_social'	   		=> 'false',
 					'custom_style'	   		=> '',
 					'use_default_style'		=> 'true',
-					'drop_shadow'			=> 'true'
+					'drop_shadow'			=> 'true',
+					'display_mode'	   => 'wp_easy_gallery',
+					'num_columns'	   => 3
 				);
 				
 				add_option('wp_easy_gallery_defaults', $gallery_options);
@@ -104,6 +106,12 @@
 				}
 				if (!in_array('drop_shadow', $keys)) {
 					$wpEasyGalleryOptions['drop_shadow'] = "true";	
+				}
+				if (!in_array('display_mode', $keys)) {
+					$wpEasyGalleryOptions['display_mode'] = "wp_easy_gallery";	
+				}
+				if (!in_array('num_columns', $keys)) {
+					$wpEasyGalleryOptions['num_columns'] = 3;	
 				}
 				if (!in_array('thumbnail_height', $keys)) {
 					$wpEasyGalleryOptions['thumbnail_height'] = $wpEasyGalleryOptions['thunbnail_height'];
@@ -193,7 +201,7 @@
 		add_submenu_page('hcg-admin', __('Easy Gallery >> Add Images','menu-hcg'), __('Add Images','menu-hcg'), 'manage_options', 'add-images', 'add_images');
 		
 		// Add a second submenu to the custom top-level menu:
-		add_submenu_page('hcg-admin', __('Easy Gallery >> Settings','menu-hcg'), __('Settings','menu-hcg'), 'manage_options', 'settings', 'settings');
+		add_submenu_page('hcg-admin', __('Easy Gallery >> Settings','menu-hcg'), __('Settings','menu-hcg'), 'manage_options', 'wpeg-settings', 'wpeg_settings');
 		
 		// Add a second submenu to the custom top-level menu:
 		add_submenu_page('hcg-admin', __('Easy Gallery >> Help (FAQ)','menu-hcg'), __('Help (FAQ)','menu-hcg'), 'manage_options', 'help', 'help');
@@ -225,9 +233,9 @@
 		attach_EasyGallery_scripts();
 	}
 	
-	function settings()
+	function wpeg_settings()
 	{
-		include("admin/settings.php");
+		include("admin/wpeg-settings.php");
 	}
 	
 	function help()
@@ -254,7 +262,25 @@
 			$gallery = $wpdb->get_row( "SELECT Id, name, thumbnail, thumbwidth, thumbheight FROM $easy_gallery_table WHERE slug = '$galleryName'" );
 		}
 		$imageResults = $wpdb->get_results( "SELECT * FROM $easy_gallery_image_table WHERE gid = $gallery->Id ORDER BY sortOrder ASC" );
+		$options = get_option('wp_easy_gallery_defaults');
+		$galleryLink = "";
 		
+		switch($options['display_mode']) {
+			case 'wp_easy_gallery':
+				$galleryLink = render_wpeg($gallery, $imageResults, $options);
+				break;
+			case 'wp_default':
+				$galleryLink = render_wp_gallery($gallery, $imageResults, $options);
+				break;
+			default:
+				$galleryLink = render_wpeg($gallery, $imageResults, $options);
+				break;
+		}
+		
+		return $galleryLink;
+	}
+
+	function render_wpeg($gallery, $imageResults, $options) {
 		$images = array();
 		$descriptions = array();
 		$titles = array();
@@ -273,32 +299,55 @@
 		$ttl = implode(", ", $titles);
 		
 		$thumbwidth = ($gallery->thumbwidth < 1 || $gallery->thumbwidth == "auto") ? "" : "width='".$gallery->thumbwidth."'";
-		$thumbheight = ($gallery->thumbheight < 1 || $gallery->thumbheight == "auto") ? "" : "height='".$gallery->thumbheight."'";
+		$thumbheight = ($gallery->thumbheight < 1 || $gallery->thumbheight == "auto") ? "" : "height='".$gallery->thumbheight."'";		
 		
-		$options = get_option('wp_easy_gallery_defaults');
 		$dShadow = ($options['drop_shadow'] == "true") ? "class=\"dShadow trans\"" : "";
 		
-		$galleryLink = "<span class=\"wp-easy-gallery\"><a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img ".$dShadow." src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a></span>";
-		return $galleryLink;
-	}	
+		$galleryMarkup = "<span class=\"wp-easy-gallery\"><a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img ".$dShadow." src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a></span>";
+		
+		return $galleryMarkup;
+	}
+	
+	function render_wp_gallery($gallery, $imageResults, $options) {
+		$numColumns = $options['num_columns'];
+		$galleryMarkup = "<style type='text/css'>#gallery-".$gallery->Id." {margin: auto;}	#gallery-".$gallery->Id." .gallery-item {float: left;margin-top: 10px;text-align: center;width: ".floor(100 / $numColumns)."%;} #gallery-".$gallery->Id." img {border: 2px solid #cfcfcf;}	#gallery-".$gallery->Id." .gallery-caption {margin-left: 0;}</style>";
+		$galleryMarkup .= "<div id='gallery-".$gallery->Id."' class='gallery gallery-columns-".$numColumns." gallery-size-thumbnail'>";
+		
+		foreach($imageResults as $image) {
+			$galleryMarkup .= "<dl class=gallery-item>";
+			$galleryMarkup .= "<dt class='gallery-icon landscape'>";
+			$galleryMarkup .= "<a href='".$image->imagePath."' rel='prettyPhoto' title='".$image->title."'>";
+			$galleryMarkup .= "<img width='150' height='150' src='".$image->imagePath."' class='attachment-thumbnail' alt='".$image->title."'>";
+			$galleryMarkup .= "</a>";
+			$galleryMarkup .= "</dt>";
+			$galleryMarkup .= "<dd class='wp-caption-text gallery-caption'>";
+			$galleryMarkup .= $image->title;
+			$galleryMarkup .= "</dd>";
+			$galleryMarkup .= "</dl>";
+		}
+		
+		$galleryMarkup .= "<br style='clear: both'></div>";
+		
+		return $galleryMarkup;
+	}
 	
 	function EasyGallery_Handler($atts) {
 	  $atts = shortcode_atts( array( 'id' => '-1', 'key' => '-1'), $atts );
 	  return createEasyGallery($atts['id'], $atts['key']);
-  }
-  add_shortcode('EasyGallery', 'EasyGallery_Handler');	
+	}
+	add_shortcode('EasyGallery', 'EasyGallery_Handler');	
   
-  add_action( 'init', 'wpeg_code_button' );
-function wpeg_code_button() {
-    add_filter( "mce_external_plugins", "wpeg_code_add_button" );
-    add_filter( 'mce_buttons', 'wpeg_code_register_button' );
-}
-function wpeg_code_add_button( $plugin_array ) {
-    $plugin_array['wpegbutton'] = $dir = plugins_url( 'js/shortcode.js', __FILE__ );
-    return $plugin_array;
-}
-function wpeg_code_register_button( $buttons ) {
-    array_push( $buttons, 'wpegselector' );
-    return $buttons;
-}
+	add_action( 'init', 'wpeg_code_button' );	
+	function wpeg_code_button() {
+		add_filter( "mce_external_plugins", "wpeg_code_add_button" );
+		add_filter( 'mce_buttons', 'wpeg_code_register_button' );
+	}
+	function wpeg_code_add_button( $plugin_array ) {
+		$plugin_array['wpegbutton'] = $dir = plugins_url( 'js/shortcode.js', __FILE__ );
+		return $plugin_array;
+	}
+	function wpeg_code_register_button( $buttons ) {
+		array_push( $buttons, 'wpegselector' );
+		return $buttons;
+	}
 ?>
