@@ -119,7 +119,7 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 * Fixed layout issue with RSS feed
 
-** Oct. 9, 2014 - v4.0 **
+**Oct. 9, 2014 - v4.0**
 
 * Added ability to render gallery as default WordPress style gallery
 * Added ability to customize number of columns for gallery display
