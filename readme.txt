@@ -144,7 +144,7 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 **Apr. 30, 2014 - v3.7**
 
-* Added option to turn gallery thumbnail dropshadows on/off.
+* Added option to turn gallery thumbnail dropshadows on or off.
 
 **Apr. 18, 2014 - v3.6.3**
 
@@ -166,7 +166,7 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 **Nov. 5, 2013 - v3.5**
 
-* Save all image changes in one click
+* Ability to save all image changes in one click
 * Selected gallery images remain selected after making images edits
 * Selected gallery remains selected after making gallery edits
 * Preview image in modal window from within admin section
@@ -210,7 +210,7 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 **Jan. 13, 2013 - v2.7**
 
-* Added the fability to hide the social sharing icons / links in the gallery pop-up
+* Added the ability to hide the social sharing icons / links in the gallery pop-up
 
 **Dec. 8, 2012 - v2.6**
 
