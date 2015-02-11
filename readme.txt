@@ -115,56 +115,56 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 
 == Changelog ==
 
-**Nov. 29, 2014 - v4.0.1**
+**v4.0.1**
 
 * Fixed layout issue with RSS feed
 
-**Oct. 9, 2014 - v4.0**
+**v4.0**
 
 * Added ability to render gallery as default WordPress style gallery
 * Added ability to customize number of columns for gallery display
 * Fixed bug with settings page not showing in admin section
 * Extracted RSS feed to an asynchronous call to allow admin pages to load quicker
 
-**Aug. 7, 2014 - v3.8.3**
+**v3.8.3**
 
 * Verified WordPress 3.9.2 compatibility
 
-**July 29, 2014 - v3.8.2**
+**v3.8.2**
 
 * Code clean-up
 
-**July 1, 2014 - v3.8.1**
+**v3.8.1**
 
 * Bug fixes to short code button
 
-**Jun. 10, 2014 - v3.8**
+**v3.8**
 
 * Added button to post/page editor for inserting short code.
 
-**Apr. 30, 2014 - v3.7**
+**v3.7**
 
 * Added option to turn gallery thumbnail dropshadows on or off.
 
-**Apr. 18, 2014 - v3.6.3**
+**v3.6.3**
 
 * replaced deprecated mysql escape calls for WordPress 3.9 compatibility.
 
-**Feb. 26, 2014 - v3.6.2**
+**v3.6.2**
 
 * Changed short code to use key instead of name. Change is backwards compatible and will not break or require changing existing gallery short codes.
 
-**Feb. 8, 2014 - v3.6.1**
+**v3.6.1**
 
 * Bug fix: corrected an issue with options
 * Improved thumbnail style CSS
 * Added ability to disable new thumbnail style
 
-**Jan. 28, 2014 - v.3.6**
+**v.3.6**
 
 * Added thumbnail style on hover
 
-**Nov. 5, 2013 - v3.5**
+**v3.5**
 
 * Ability to save all image changes in one click
 * Selected gallery images remain selected after making images edits
@@ -172,116 +172,116 @@ Keywords: <a href='http://labs.hahncreativegroup.com/wordpress-gallery-plugin/' 
 * Preview image in modal window from within admin section
 * converted strtolower() function to mb_convert_case() for better UTF-8 character handling
 
-**Oct. 19, 2013 - v3.1**
+**v3.1**
 
 * Fixed issue that prevented galleries with same names from being properly displayed.
 
-**Sept. 1, 2013 - v3.0**
+**v3.0**
 
 * Added ability to insert custom styles for thumbnails. New field is on settings page.
 
-**June 15, 2013 - v2.8**
+**v2.8**
 
 * Updated prettyPhoto JS script to version 3.1.5
 
-**May 22, 2013 - v2.7.6**
+**v2.7.6**
 
 * Fixed improper JS file path
 
-**May 17, 2013 - v2.7.5**
+**v2.7.5**
 
 * Fixed ability to hide galleries and added ability to hide social sharing buttons.
 
-**Mar. 14, 2013 - v2.7.3**
+**v2.7.3**
 
 * Added CSS to prettyPhoto stylesheet to correct arrow alignment and issue with mini-gallery spilling over the popup window.
 
-**Feb. 27, 2013 - v2.7.3**
+**v2.7.3**
 
 * Added jQuery Migrate script for jQuery 1.9.1 compatibility
 
-**Feb. 23, 2013 - v2.7.2**
+**v2.7.2**
 
 * Fixed bug related to security fix that prevented the ability to upload images
 
-**Feb. 17, 2013 - v2.7.1**
+**v2.7.1**
 
 * Critical security patches
 
-**Jan. 13, 2013 - v2.7**
+**v2.7**
 
 * Added the ability to hide the social sharing icons / links in the gallery pop-up
 
-**Dec. 8, 2012 - v2.6**
+**v2.6**
 
 * Style update to fix social sharing button layout issue
 * Addition of settings page and functionality to hide thumbnail overlay from settings
 
-**Nov. 25, 2012 - v2.5**
+**v2.5**
 
 * Updated prettyPhoto.js jQuery script to version 3.1.4 for various bug fixes and added social sharing abilities
 
-**Nov. 8, 2012 - v2.4**
+**v2.4**
 
 * Added handling for default thumbnail dimensions
 
-**Oct. 1, 2012 - v2.3**
+**v2.3**
 
 * Updated Add Images interface for easier deletion of images
 
-**Sept. 20, 2012 - v2.2**
+**v2.2**
 
 * Code fixes to admin pages to fix HTML validation issues
 
-**Aug. 26, 2012 - v2.1**
+**v2.1**
 
 * Added Help (FAQ) page to plugin
 
-**Jun. 27, 2012 - v2.0**
+**v2.0**
 
 * Tighted security against remote scripting attacks
 
-**Jun. 5, 2012 - v1.9**
+**v1.9**
 
 * Changed the manner in which JS files are called into theme
 
-**Apr. 18, 2012 - v1.8**
+**v1.8**
 
 * Fixed vulnerability found in code base: Input passed via the "select_gallery" or "galleryId" parameter to wp-admin/admin.php (when "page" is set to "edit-gallery") is not properly sanitised in wp-content/plugins/wp-easy-gallery/admin/edit-gallery.php before being returned to the user.
 
-**Mar. 13, 2012 - v1.7**
+**v1.7**
 
 * Critical bug fixes and code enhancements
 
-**Mar. 10, 2012 - v1.6**
+**v1.6**
 
 * SEO enhancements
 
-**Mar. 3, 2012 - v1.5**
+**v1.5**
 
 * Additional bug fixes
 
-**Feb. 25, 2012 - v1.4**
+**v1.4**
 
 * Bug fixes addressing undefined variable warnings
 
-**Jan. 9, 2012 - v1.3.1**
+**v1.3.1**
 
 * Fixed issue preventing custom database table prefixes from passing through on gallery specific code
 
-**Dec. 9, 2011 - v1.3**
+**v1.3**
 
 * Fixed issue preventing custom database table prefixes from passing through
 
-**Nov. 14, 2011 - v1.2**
+**v1.2**
 
 * Cursor now shows pointer when gallery thumbnail is in hover state.
 * Added functionality to show gallery name on hover.
 
-**Nov. 7, 2011 - v1.1**
+**v1.1**
 
 * Fixed bug that caused screen jumping when gallery launched.
 
-**Oct. 24, 2011 - v1.0**
+**v1.0**
 
 * Initial release.
