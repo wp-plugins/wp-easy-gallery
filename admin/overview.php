@@ -71,7 +71,7 @@ $default_options = get_option('wp_easy_gallery_defaults');
      </table>
      <br />
      <h3><?php _e('Default Options', 'wp-easy-gallery'); ?></h3>
-     <p>Go to: <a href="?page=settings">Settings</a> page.</p>
+     <p>Go to: <a href="?page=wpeg-settings">Settings</a> page.</p>
      <hr />     
      <br />
 <div style="float: left; width: 60%; min-width: 488px;">     

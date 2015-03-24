@@ -4,7 +4,7 @@
 	Plugin URI: http://labs.hahncreativegroup.com/wordpress-gallery-plugin/
 	Description: Wordpress Plugin for creating dynamic photo galleries	
 	Author: HahnCreativeGroup
-	Version: 4.0.1
+	Version: 4.1
 	Author URI: http://labs.hahncreativegroup.com/wordpress-plugins/easy-gallery/
 	*/	
 	
@@ -80,7 +80,9 @@
 					'use_default_style'		=> 'true',
 					'drop_shadow'			=> 'true',
 					'display_mode'	   => 'wp_easy_gallery',
-					'num_columns'	   => 3
+					'num_columns'	   => 3,
+					'show_gallery_name'=> 'true',
+					'gallery_name_alignment' => 'left'
 				);
 				
 				add_option('wp_easy_gallery_defaults', $gallery_options);
@@ -116,6 +118,12 @@
 				if (!in_array('thumbnail_height', $keys)) {
 					$wpEasyGalleryOptions['thumbnail_height'] = $wpEasyGalleryOptions['thunbnail_height'];
 					unset($wpEasyGalleryOptions['thunbnail_height']);
+				}
+				if (!in_array('show_gallery_name', $keys)) {
+					$wpEasyGalleryOptions['show_gallery_name'] = "true";	
+				}
+				if (!in_array('gallery_name_alignment', $keys)) {
+					$wpEasyGalleryOptions['gallery_name_alignment'] = "left";	
 				}
 				
 				update_option('wp_easy_gallery_defaults', $wpEasyGalleryOptions);	
@@ -302,16 +310,21 @@
 		$thumbheight = ($gallery->thumbheight < 1 || $gallery->thumbheight == "auto") ? "" : "height='".$gallery->thumbheight."'";		
 		
 		$dShadow = ($options['drop_shadow'] == "true") ? "class=\"dShadow trans\"" : "";
+		$showName = ($options['show_gallery_name'] == "true") ? "<p class=\"wpeg-gallery-name ".$options['gallery_name_alignment']."\">".$gallery->name."</p>" : "";
 		
-		$galleryMarkup = "<span class=\"wp-easy-gallery\"><a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img ".$dShadow." src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a></span>";
+		$galleryMarkup = "<span class=\"wp-easy-gallery\"><a onclick=\"var images=[".$img."]; var titles=[".$ttl."]; var descriptions=[".$desc."]; jQuery.prettyPhoto.open(images,titles,descriptions);\" title=\"".$gallery->name."\" style=\"cursor: pointer;\"><img ".$dShadow." src=\"".$gallery->thumbnail."\" ".$thumbwidth." ".$thumbheight." border=\"0\" alt=\"".$gallery->name."\" /></a>".$showName."</span>";
 		
 		return $galleryMarkup;
 	}
 	
 	function render_wp_gallery($gallery, $imageResults, $options) {
 		$numColumns = $options['num_columns'];
+		$showName = $options['show_gallery_name'];
 		$galleryMarkup = "<style type='text/css'>#gallery-".$gallery->Id." {margin: auto;}	#gallery-".$gallery->Id." .gallery-item {float: left;margin-top: 10px;text-align: center;width: ".floor(100 / $numColumns)."%;} #gallery-".$gallery->Id." img {border: 2px solid #cfcfcf;}	#gallery-".$gallery->Id." .gallery-caption {margin-left: 0;}</style>";
 		$galleryMarkup .= "<div id='gallery-".$gallery->Id."' class='gallery gallery-columns-".$numColumns." gallery-size-thumbnail'>";
+		if ($showName == 'true') {
+			$galleryMarkup .= "<h4 class=\"wpeg-gallery-name ".$options['gallery_name_alignment']."\">".$gallery->name."</h4>";
+		}
 		
 		foreach($imageResults as $image) {
 			$galleryMarkup .= "<dl class=gallery-item>";

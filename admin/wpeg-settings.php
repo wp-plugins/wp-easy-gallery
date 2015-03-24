@@ -4,6 +4,8 @@ if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You 
 if (isset($_POST['defaultSettings'])) {
 	if(check_admin_referer('wpeg_settings','wpeg_settings')) {
 	  $temp_defaults = get_option('wp_easy_gallery_defaults');	
+	  $temp_defaults['show_gallery_name'] = isset($_POST['show_gallery_name']) ? $_POST['show_gallery_name'] : 'false';
+	  $temp_defaults['gallery_name_alignment'] = isset($_POST['gallery_name_alignment']) ? $_POST['gallery_name_alignment'] : 'left';
 	  $temp_defaults['hide_overlay'] = isset($_POST['hide_overlay']) ? $_POST['hide_overlay'] : 'false';
 	  $temp_defaults['hide_social'] = isset($_POST['hide_social']) ? $_POST['hide_social'] : 'false';
 	  $temp_defaults['use_default_style'] = isset($_POST['use_default_style']) ? $_POST['use_default_style'] : 'false';
@@ -58,7 +60,23 @@ $default_options = get_option('wp_easy_gallery_defaults');
 			<tr id="num_columns_wrap" style="display: none;">
             	<td>Number of Columns</td>
                 <td><input type="number" name="num_columns" id="num_columns" value="<?php _e($default_options['num_columns']); ?>" /></td>
-                <td>This is the number of columns per row</td>
+                <td>This is the number of columns per row (for default WordPress gallery view)</td>
+            </tr>
+			<tr>            	
+            	<td>Show Gallery Name</td>
+                <td><input type="checkbox" name="show_gallery_name" id="show_gallery_name"<?php _e(($default_options['show_gallery_name'] == 'true') ? "checked='checked'" : ""); ?> value="true" /></td>
+                <td>Show or Hide gallery name.</td>            
+            </tr>
+			<tr>            	
+            	<td>Gallery Name Alignment</td>
+                <td>
+					<select id="gallery_name_alignment" name="gallery_name_alignment">
+						<option value="left"<?php _e(($default_options['gallery_name_alignment'] == 'left') ? " selected" : ""); ?>>Left</option>
+						<option value="center"<?php _e(($default_options['gallery_name_alignment'] == 'center') ? " selected" : ""); ?>>Center</option>
+						<option value="right"<?php _e(($default_options['gallery_name_alignment'] == 'right') ? " selected" : ""); ?>>Right</option>
+					</select>
+				</td>
+                <td>Set the text alignment of the gallery name display.</td>            
             </tr>
             <tr>            	
             	<td>Hide Gallery Overlay</td>
